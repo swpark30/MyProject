@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+/* myPage1.html 에서 사용*/
+
+li div {
+	width: 300px;
+	margin : 0 auto;
+	text-align: left;
+}
+
+#buttons {
+	text-align: right;
+}
+

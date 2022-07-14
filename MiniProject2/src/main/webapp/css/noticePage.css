@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/*********************** 섹션 ************************/
+
+section {
+	position: relative;
+	top:75px;
+	display: flex;
+	justify-content: center;
+	height: auto;
+	min-height: 100%;
+	padding-bottom:2%;
+
+}
+
+#bodyWrap {
+	width:70%;
+	height: 100%;
+}
+
+#bodyWrap #createNotice button{
+	background-color: rgb(112, 190, 248);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	margin: 50px 0 0 130px;
+	width:80%;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#bodyWrap #createNotice button:hover{
+	cursor: pointer;
+}
+
+#noticeBox #arrayTitle{
+	margin: 50px 0 0 100px; 
+}
+
+.btnFilter{
+	background-color: white;
+	color: rgb(128, 128, 128);
+	border: none;
+	border-radius: 5px;
+	margin-right: 20px; 
+	font-size: 15px;	
+	width: 60px;
+	height: 25px;
+	font-weight: bold;
+}
+
+.btnFilter:hover{
+	background-color: rgb(112, 190, 248);
+	color: white;
+	cursor: pointer;
+}
+
+.btnFilterActive{
+	background-color: rgb(112, 190, 248);
+	color: white;
+}
+
+#noticeBox .notice{
+	width: 85%;
+	height: 200px;
+	border: 1px solid rgb(216, 216, 216);
+	border-radius: 20px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+#bodyWrap #pageNum{
+	text-align: center;
+	margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+

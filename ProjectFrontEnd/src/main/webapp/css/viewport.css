@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/*너비가 최대 576px까지의 style*/
+@media screen and (max-width: 576px) {  
+	
+}
+
+/*너비가 576px - 768px의 style*/
+@media screen and (min-width: 577px) and (max-width: 768px) { 
+	
+}
+
+/*너비가 769px - 992px의 style*/
+@media screen and (min-width: 769px) and (max-width: 992px){  
+	
+}
+
+/*너비가 993px - 1200px의 style*/
+@media screen and (min-width: 993px) and (max-width: 1200px){
+	
+}
+
+/*너비가 최소 1201px부터의 style*/
+@media screen and (min-width: 1201px) { 
+	
+}

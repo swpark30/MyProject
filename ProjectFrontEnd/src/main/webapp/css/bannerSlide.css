@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* bannerSlideShowBox.css */
+
+/* 라인 */
+.line {	border-bottom:1px solid #bbc2c2; margin-top:150px;}
+
+/*  배너 광고 */
+#slideBanner {
+	margin-top:20px;
+	position:relative;
+	max-height:100px;
+	line-height:100px;
+	margin-bottom:30px;
+	top:100px;
+	
+
+}
+
+
+#bannerSlideBox {
+	margin-top:30px;
+	margin-left:240px;
+	height:100px;
+	text-align:center;
+	overflow:hidden;
+	width:800px;
+	
+
+}
+
+#bannerPanel {
+	position:relative;
+	width:4000px; /* 이미지5개 옆으로 나란히 */
+	max-height:100px;
+	text-align:center;
+	
+}
+
+.bannerImage {
+	text-align:center;
+	float:left;
+	width:800px;
+	max-height:100px;
+}
+
+
+/* 버튼 */
+#prevNextButtonBox { position:relative; z-index:9;}
+#prevButton {width:2%; 
+				position:absolute; 
+				top:43px; 
+				left:20%; 
+				opacity:0.8; 
+				cursor:pointer; 
+				
+}
+#nextButton {
+	width:2%; 
+	position:absolute; 
+	top:43px; 
+	right:20%; 
+	opacity:0.8; 
+	cursor:pointer;
+	
+}
+
+#prevButton:hover {opacity:1;}
+#nextButton:hover {opacity:1;}

@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+/* section */
+body { background:#f8f9fa;; }
+
+/* 보드 이미지 글 정렬 */
+.imageFontBox { display:flex; }
+.imagebox {display:flex; flex-direction:column; margin-bottom:10px; }
+.fontbox {display:flex; align-items:center;} 
+.fontbox h3 { font-weight:bold; font-size:16px; margin-left:10px;}
+
+/* 전체 레이아웃 구성 */
+.Mainframe {
+	display:flex;
+	margin-top:100px;
+	margin-left:40px; 
+	
+}
+
+.frame1 {
+	display:flex;
+	flex-direction:column;
+	margin-left:40px;
+	
+}
+
+
+.frame2 { 
+		width:600px;
+		margin-left:80px;
+}
+
+.public { 
+	width:480px;
+}
+
+.QNA { margin-top:30px;
+	width:480px;
+}
+
+.freeboard {
+	width:480px;
+	margin-top:30px;
+}
+
+
+.WeeklyBest{
+	width:480px;
+}
+
+
+.recruit {
+	margin-top:30px;
+	margin-bottom:30px;
+	width:480px;
+}
+
+/* 특수 기호 배치 */
+.fontbox i {
+		margin-left:350px;
+}
+
+.fontbox .QnA i {
+		margin-left:370px;
+}
+/*  개인 게시글 설정 */
+
+/* 좌측 바 컬러 댓글이 있는 경우 표시 : 그린 */
+.personal {
+	border-left:4px solid #a5d4c0;
+	outline:2px solid #bbc2c2;;
+	padding:10px;
+	display:flex;
+	justify-content :space-between;
+	
+}
+/* 좌측 바 컬러 댓글이 없는 경우 : 그레이 */
+.personalID { border-left:4px solid #bbc2c2;
+		outline:2px solid #bbc2c2;;
+		padding:10px;
+		display:flex;
+		justify-content:space-between;
+}
+
+/* 유저 인터페이스 우측에 배치 */
+.subMenu{
+	 display:flex; 
+}
+.userSub{
+	align-items:center;
+	display:flex;  
+	width:140px;
+}
+
+.day { width:60px; 
+	text-align:right;
+}
+
+/* 유저 닉네임, 게시물 게재한 시간 */
+.nickname { display:inline-block; padding:3px;
+	font-size:12px;
+}
+.day { 
+	font-size:12px; 
+	padding:3px;
+	display:inline-block; 
+}
+
+/* 광고 이미지 3개 */
+.advertise {
+	margin-top:20px;
+	display:flex;
+	
+}
+
+.adImage1 { width:480px;
+		margin-top:30px;
+}
+
+.adImage2{
+	flex-direction:row;
+	width:480px;
+	margin: 30px 30px 30px 0;
+	
+}
+
+/* .adImage3 {
+	margin-bottom:20px;
+	width:480px;
+	
+	.adImgBox3 a:hover {opacity:0.5;}
+} */
+
+.adImgBox1 a:hover {opacity:0.5;}
+.adImgBox2 a:hover {opacity:0.5;}

@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+
+* {margin:0; padding:0;}
+
+body {
+	background-color: #a5d4c0;
+}
+
+#wrap {
+	margin: 0 auto;
+	width: 1000px;
+	height: 1000px;
+}
+
+#wrap h1 {
+	position: relative;
+	top: 150px;
+	font-size: 60px;
+}
+
+/* 로그인 박스 */
+#loginBox { 
+	border: 1px solid;
+	margin: 0 auto;
+	width: 400px;
+	height: 600px;
+	position: relative;
+	top: 200px;		
+	text-align: center;
+	border-radius: 30px;
+	background-color: rgb(207, 207, 207);
+	border-style:groove;
+	box-shadow: 8px 8px 15px rgba( 31, 38, 135, 0.37 );
+}
+
+#loginBox ul {
+	list-style: none;
+	position: relative;
+	top: 150px;
+}
+
+#loginBox ul img {
+	position: relative;
+	width: 100px;
+	top : -70px;
+}
+
+#loginBox ul img:hover{
+	cursor: pointer;
+}
+
+#loginBox ul #logoText{
+	position: relative;
+	font-size: 40px;
+	top : -70px;
+}
+
+#loginBox ul .loginblock {
+	position: relative;
+	margin: 10px ;
+	width: 300px;
+	height: 40px
+}
+
+#loginBox ul .loginText{
+	border-radius: 10px;
+	border-style: hidden;
+} 
+
+#loginBox ul a{
+	text-decoration: none;
+	margin: 5px;
+	color: black;
+}

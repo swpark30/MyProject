@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/* userManage.html에 사용 */
+#leftWarp {
+	display: inline-block;
+	width: 20%;
+	height: 100%;
+	vertical-align: top;
+	margin-top: 40px;
+	margin-left: 10px;
+}
+
+#leftWarp>div:first-child {
+	width: 170px;
+	float: left;
+	margin-top: 12px;
+}
+
+#leftWarp>div:nth-child(2) {
+	margin-bottom: 10px;
+}
+
+#leftWarp table {
+	clear: left;
+	margin: 0;
+	height: 100%;
+	border: 1px solid rgba(102, 152, 203, 1);
+	border-collapse: collapse;
+}
+
+#leftWarp table th {
+	border: 1px solid rgba(102, 152, 203, 1);
+	background-color: rgba(102, 152, 203, 1);
+}
+
+#leftWarp table td {
+	border: 1px solid rgba(102, 152, 203, 1);
+}
+
+#rightWarp {
+	width: 79%;
+	display: inline-block;
+	height: 100%;
+	margin-left: 100px;
+}
+
+.selectWidth {
+	width: 40%;
+}
+
+.editable:hover {
+	opacity: 0.7;
+	cursor: pointer;
+	box-shadow: 0 0 2px 0 blue inset, 0 0 2px 2px blue;
+}

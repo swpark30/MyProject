@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/* moveButton.css */
+
+#moveButtonBox {
+	margin-left:1500px;
+	position:fixed;
+	z-index:20;
+}
+
+#moveToTopBox {
+	margin-bottom:10px;
+}
+
+#moveToTop:hover {
+	
+	opacity:0.7; 
+	cursor:pointer;
+}
+
+#moveToBottom:hover {
+	opacity:0.7; 
+	cursor:pointer;
+}

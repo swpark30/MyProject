@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+
+/* header */
+/* 전체 폭 설정 */
+#wrapper { margin:0 auto; max-width:100%;}
+#container {margin :0 auto; width:1280px; font-size:14px; }
+
+
+#menuTabBox { background:#a5d4c0; 
+	position:fixed; 
+	z-index:10; 
+	width:100%;
+}
+
+#wholeMenuFrame {
+	justify-content:space-between;
+	display:flex;
+	align-items:center;
+	
+}
+
+#menuFrame1 { display:flex;
+	
+	
+}
+#menuFrame2 { display:flex; 
+	
+}
+
+#menuFrame3 {
+	display:flex;
+	
+}
+
+/* header 로고, 버튼 정렬 */
+
+#menuTab { 
+	display:flex;
+	align-items:center;
+	padding:20px;
+	
+	
+}
+
+/* 메뉴탭 */
+/* background :#a5d4c0; */
+
+#menuTab ul {height:40px; 
+		line-height:40px;
+		margin-left:10px;
+		
+		
+}
+
+#menuTab ul li {
+	display:inline-block;
+	
+	
+}
+#menuTab ul li a {color:#fff; 
+	font-size:16px; 
+	padding:5px;
+	font-weight:bold;
+	margin-left:5px;
+	
+	
+	
+}
+#menuTab ul li a:hover { 
+	color:rgba(27,188,194,1); 
+	background:#fff; 
+}
+/* 검색창  */
+
+.searchBox {display:flex; 
+	justify-content:space-between; 
+	background:#fff;
+	margin-right:230px;
+	
+}
+
+.searchButton { display:flex; 
+		align-items:center;
+		width:200%;
+}
+.searchIcon { 
+		width:50%; 
+		margin-top:5px;
+		margin-left:10px;
+}
+
+#search { border:none;}
+
+
+/* 버튼 우측 정렬 */
+#buttonbox {
+	margin:20px 40px 20px 0;
+	align-items:center;
+
+}
+
+/* 마스터 계정 로그인시 display 설정 평소엔 none */
+#buttonbox #master,  #admin, #myPage{display:none;}
+
+/* 로그인 시 사용자 이름 보이기 */
+#user {
+	font-size: 26px;
+	font-weight: bold;
+	margin-right: 30px;
+	margin-top: 30px;
+} 

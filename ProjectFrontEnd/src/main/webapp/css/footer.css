@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/* footer  */
+footer { border-top:1px solid #bbc2c2; 
+			width:1280px; 
+			margin-bottom:10px;
+}
+
+
+#logoListBox{
+	display:flex;
+	justify-content:column;
+	align-items:center;
+}
+
+#logoBox {
+	display:flex;
+	
+}
+
+
+#footerLogo {
+	margin-top:10px;
+	width:90%;
+}
+#listBox ul { 
+	padding:7px;  
+	margin:10px 0 0 10px;
+	
+}
+#listBox ul li { 
+	display:inline-block;
+	color:#999;
+}
+
+#listBox ul li a {color:#999;}
+
+#footerline {
+	margin-left:10px;
+	color:#999;
+}
+
+#information li {
+	display:inline-block;
+	color : #999;
+}
+
+#footerAddress {
+	margin:0 0 0 69px;
+	color:#999;
+}
+#footerAddress li {
+	margin-top:10px;
+}
+#footerAddress li:last-child{ 
+	padding-bottom:10px;
+	
+}
+
+
+#footerFrmae {
+	display:flex;
+	justify-content:space-between;
+}
+
+#footerFrmae1{
+	display:flex;
+}
+
+#iconBox { margin-top:20px;
+	margin-right:40px;
+}
+
+#git {
+	margin-left:15px;
+}
+#icon li {
+	display:inline-block;
+}

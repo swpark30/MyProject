@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>마이페이지</title>
+		<link href="../image/logo.png" rel="shortcut icon" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../css/common.css" >
+		<link rel="stylesheet" type="text/css" href="../css/join.css">
+		<script src="../js/jquery-3.6.0.min.js"></script>
+		<script src="../js/join.js"></script>
+		<script src="../js/myPage.js"></script>
+	</head>
+	<body>
+		<h1  align="center">My Page</h1>
+        <br><hr>
+    	<div id="wrap">
+			<div id="joinBox">
+				<form id="joinForm" action="#">
+					<table>
+						<tr>
+							<td>성명</td>
+							<td><input type="text" id="name" class="textBox" placeholder="성명"></td>
+						</tr>
+						<tr>
+							<td>아이디</td>
+							<td><br>
+								<input type="text" id="id" class="textBox" placeholder="ID">
+								<input type="button" id="idBtn" class="btn-gradient cyan" value="ID중복체크">
+								<br>(영문자+숫자: 6~10자)
+							</td>
+						</tr>
+						<tr>
+							<td>비밀번호</td>
+							<td><br><input type="password" id="pwd" class="textBox" size="20">
+								<br>(영문자+숫자+특수문자: 10~20자)
+							</td>
+						</tr>
+						<tr>
+							<td>비밀번호 확인</td>
+							<td><input type="password" id="pwdCheck" class="textBox" size="20"></td>
+						</tr>
+						<tr>
+							<td>생년월일</td>
+							<td><input type="text" id="birthYear" class="textBox" size="3" maxlength="4" placeholder="2022">&nbsp;년&nbsp;
+								<select id="birthMonth" class="textBox">
+									<option value="1">1
+									<option value="2">2
+									<option value="3">3
+									<option value="4">4
+									<option value="5">5
+									<option value="6">6
+									<option value="7">7
+									<option value="8">8
+									<option value="9">9
+									<option value="10">10
+									<option value="11">11
+									<option value="12">12
+							</select>&nbsp;월&nbsp;<select id="birthDay" class="textBox">
+									<option value="1">1
+									<option value="2">2
+									<option value="3">3
+									<option value="4">4
+									<option value="5">5
+									<option value="6">6
+									<option value="7">7
+									<option value="8">8
+									<option value="9">9
+									<option value="10">10
+									<option value="11">11
+									<option value="12">12
+									<option value="13">13
+									<option value="14">14
+									<option value="15">15
+									<option value="16">16
+									<option value="17">17
+									<option value="18">18
+									<option value="19">19
+									<option value="20">20
+									<option value="21">21
+									<option value="22">22
+									<option value="23">23
+									<option value="24">24
+									<option value="25">25
+									<option value="26">26
+									<option value="27">27
+									<option value="28">28
+									<option value="29">29
+									<option value="30">30
+									<option value="31">31
+							</select>&nbsp;일&nbsp;&nbsp;
+							<input type="radio" id="solar" name="solar" value="양력" checked>&nbsp;
+								<label for="solar">양력</label>
+							<input type="radio" id="lunar" name="solar" value="음력">&nbsp;
+								<label for="lunar">음력</label></tr>
+						<tr>
+							<td>전화번호</td>
+							<td><select id="Tel1" class="textBox">
+									<option value="02">02
+									<option value="070">070
+									<option value="032">032
+									<option value="031">031
+									<option value="010" selected>010
+									<option value="011">011
+									<option value="019">019
+								</select>&nbsp;-&nbsp;
+								<input type="text" id="Tel2" class="textBox" size="4" maxlength="4">&nbsp;-&nbsp;
+								<input type="text" id="Tel3" class="textBox" size="4" maxlength="4">
+							</td>
+						</tr>
+						<tr>
+							<td>직업</td>
+							<td><select id="job" class="textBox">
+									<option value="">직업선택
+									<option value="프론트엔드">프론트엔드
+									<option value="백엔드">백엔드
+									<option value="풀스택">풀스택
+									<option value="학생">학생
+							</select></td>
+						</tr>
+						<tr>
+							<td>이메일</td>
+							<td><input type="text" id="email1" class="textBox" size="6">&nbsp;@&nbsp;
+								<select id="email2" class="textBox">
+									<option value="naver" selected>naver.com
+									<option value="gmail">gmail.com
+									<option value="hanmail">hanmail.net
+								</select>
+								<input type="button" id="emailBtn" class="btn-gradient cyan" value="email 중복체크"></td>
+						</tr>
+						<tr>
+							<td>이메일 수신 여부</td>
+							<td>
+								<table>
+									<tr>
+										<td width="140"><input type="radio" id="agree"
+											name="emailRcv" value="1"> &nbsp;<label for="agree">동의</label>
+										</td>
+										<td width="140"><input type="radio" id="disagree"
+											name="emailRcv" value="2"> &nbsp;<label for="disagree">비동의</label>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center">
+								<button type="submit" class="btn-gradient cyan">확 인</button>
+								<button type="reset" id="prevBtn" class="btn-gradient red">취 소</button>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
