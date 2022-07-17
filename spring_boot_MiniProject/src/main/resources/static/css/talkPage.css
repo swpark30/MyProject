@@ -11,23 +11,23 @@ section {
 	padding-bottom:10%;
 }
 
-#bodyWrap {
+.bodyWrap {
 	width:1400px;
 	height: 100%;
 	display: flex;
 }
 
 /********** 자유 박스 *********/
-#bodyWrap #talkBoxWrap{
+.bodyWrap .talkBoxWrap{
 	width: 1050px;
 }
 
 /*********** 사이드박스 ********/
-#bodyWrap #sideBox{
+.bodyWrap .sideBox{
 	width: 350px;
 }
 
-#sideBox #createTalk button{
+.sideBox .createTalk button{
 	background-color: rgb(112, 190, 248);
 	color: white;
 	border: none;
@@ -39,6 +39,6 @@ section {
 	font-weight: bold;
 }
 
-#sideBox #createTalk button:hover{
+.sideBox .createTalk button:hover{
 	cursor: pointer;
 }

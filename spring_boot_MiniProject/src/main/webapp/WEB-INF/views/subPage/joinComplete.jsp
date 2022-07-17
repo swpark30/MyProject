@@ -17,18 +17,18 @@
 	<body>
 		<c:import url="/WEB-INF/views/layout/top.jsp"/>
 		<section>
-			<div id="loginBox">
+			<div class="loginBox">
 				<h1>회원가입 완료</h1>
-				<h2><a href="../index.html"><img src="../image/logo-withus3.PNG"></a></h2>
-				<div id="joinMentBtn">
-					<ul id="joinMent">	
+				<h2><a href="/"><img src="image/logo-withus3.PNG"></a></h2>
+				<div class="joinMentBtn">
+					<ul class="joinMent">	
 						<li><a>회원가입이 <span class="colorFont">완료</span> 되었습니다.</a><br><br></li>
 						<li><a><span class="colorFont">위더스</span>의 일원이 되신 것을 축하합니다.</a><br><br></li>
 					</ul> <!-- joinMent -->
 					
-					<ul id="loginHomeBtn">
-						<li><input type="button" id="loginBtn" class="btn-gradient cyan" value="로그인"></li>
-						<li><input type="button" id="homeBtn" class="btn-gradient " value="홈으로"></li>
+					<ul class="loginHomeBtn">
+						<li><input type="button" class="loginBtn btn-gradient cyan" value="로그인"></li>
+						<li><input type="button" class="homeBtn btn-gradient " value="홈으로"></li>
 					</ul>
 				</div> <!-- joinMentBtn -->
 			</div><!--loginBox  -->

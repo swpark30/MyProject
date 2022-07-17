@@ -3,9 +3,9 @@
  */
  $(document).ready(function(){
  // 메뉴 언더라인 **************************************************
-	let underLine = document.getElementById("underline");
-	let menu = document.querySelectorAll("#topMenu a");
-	let firstMenu = document.querySelector("#topMenu a:nth-child(4)");
+	let underLine = document.querySelector(".underline");
+	let menu = document.querySelectorAll(".topMenu a");
+	let firstMenu = document.querySelector(".topMenu a:nth-child(4)");
 
 	
 	menu.forEach(x=>
@@ -28,8 +28,8 @@
 });
 
  $(document).ready(function(){
-	let underLine = document.getElementById("underline");
-	let firstMenu = document.querySelector("#topMenu a:nth-child(4)");
+	let underLine = document.querySelector(".underline");
+	let firstMenu = document.querySelector(".topMenu a:nth-child(4)");
 	
 	 underLine.style.left = firstMenu.offsetLeft + "px";
 	underLine.style.width = firstMenu.offsetWidth + "px";
@@ -38,21 +38,16 @@
 	firstMenu.style.color = "rgba(69, 170, 245, 0.7)";	
 });
 
-$(document).ready(function(){
-	$('#menuImg').on('click', function(){
-		location.href = "../index.html";
-	});
-});
 
 // 무한 슬라이드쇼 **************************************************
 $(document).ready(function(){
-	var slides = document.querySelector('#slidePanel'),
+	var slides = document.querySelector('.slidePanel'),
 		slide = document.querySelectorAll('.slideImage'),
 		currentIdx = 0,
 		slideCount = slide.length,
 		slideWidth = 650,
-		prevBtn = document.querySelector('#prevButton'),
-		nextBtn = document.querySelector('#nextButton'),
+		prevBtn = document.querySelector('.prevButton'),
+		nextBtn = document.querySelector('.nextButton'),
 		controlBtn = document.querySelectorAll('.controlButton'),
 		controlCount = controlBtn.length;
 		

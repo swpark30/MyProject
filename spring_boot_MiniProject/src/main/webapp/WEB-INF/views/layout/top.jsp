@@ -6,24 +6,24 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Top 메뉴</title>
-		<link rel="stylesheet" type="text/css" href="../css/headerMenu.css">
-		<script src="../js/jquery-3.6.0.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/headerMenu.css">
+		<script src="js/jquery-3.6.0.min.js"></script>
 	</head>
 	<body>
 		<header>
-			<div id="mainMenu">
-				<div id="menuImg">
+			<div class="mainMenu">
+				<div class="menuImg">
 					<a href="<c:url value='/'/>"><img src="image/logo-withus2.png"></a>
 				</div>
-				<div id="topMenu">
-					<div id="underline"></div>
+				<div class="topMenu">
+					<div class="underline"></div>
 					<a href="<c:url value='/'/>">Home</a>
 					<a href="<c:url value='/noticePage'/>">Notice</a>
 					<a href="<c:url value='/questionPage'/>">Question</a>
 					<a href="<c:url value='/talkPage'/>">Talk</a>
 					<a href="<c:url value='/ITNewsPage'/>">IT News</a>
 				</div>
-				<div id="login">
+				<div class="login">
 					<c:if test="${empty sessionScope.sid}">
 						<a href="<c:url value='/loginForm'/>">로그인</a>
 						<a>|</a>

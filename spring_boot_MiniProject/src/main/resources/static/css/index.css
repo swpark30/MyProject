@@ -2,7 +2,7 @@
 
 * {margin:0; padding:0; /* border: 1px solid; */}
 
-#wrap { 
+.wrap { 
 	width: 100%; 
 	height: 100%; 
 	position: absolute; 
@@ -11,29 +11,29 @@
 
 /* 헤더 메뉴바 */
 
-#mainMenu {
+.mainMenu {
 	display: flex;
 	justify-content: space-between;
 	width: 1150px;
 	margin-left: 19%;
 }
 
-#mainMenu #menuImg{
+.mainMenu .menuImg{
 	margin-top: 15px;
 }
 
-#mainMenu #menuImg img {
+.mainMenu .menuImg img {
 	width: 150px;
 	height:50px;
 	cursor: pointer;
 }
 
-#mainMenu #topMenu {
+.mainMenu .topMenu {
 	display: flex;
 	justify-content: center;
 }
 
-#mainMenu #topMenu #underline {
+.mainMenu .topMenu .underline {
 	position: absolute;
 	background-color: rgba(69, 170, 245, 0.7);
 	height: 4px;
@@ -42,7 +42,7 @@
 	border-radius: 3px;
 }
 
-#mainMenu #topMenu a{
+.mainMenu .topMenu a{
 	text-decoration: none;
 	color: white;
 	margin: 30px 0 10px 0;
@@ -50,16 +50,16 @@
 	padding: 0 20px 5px 20px;
 }
 
-#mainMenu #topMenu a:hover{
+.mainMenu .topMenu a:hover{
 	color: rgba(69, 170, 245, 0.7);
 }
 
-#mainMenu #login {
+.mainMenu .login {
 	margin-top: 30px;
 	color: white;
 }
 
-#mainMenu #login a {
+.mainMenu .login a {
 	text-decoration: none;
 	color: white;
 	font-size: 12px;
@@ -73,39 +73,39 @@ section {
 	justify-content: center;
 }
 
-#sectionWrap {
+.sectionWrap {
 	width:60%;
 }
 
-#sectionWrap #mainTitle{
+.sectionWrap .mainTitle{
 	text-align: center;
 	margin-top: 120px;
 }
 
-#sectionWrap #mainTitle h1 {
+.sectionWrap .mainTitle h1 {
 	color: white;
 	font-size: 70px;
 	
 }
 
-#bodyMenuWrap{
+.bodyMenuWrap{
 	display: flex;
 	justify-content: space-between;
 	margin-top: 100px;
 }
 
-#bodyMenuWrap .bodyMenu {
+.bodyMenuWrap .bodyMenu {
 	text-align: center;
 	width: 300px;
 }
 
-#bodyMenuWrap .bodyMenu .boardPhoto {
+.bodyMenuWrap .bodyMenu .boardPhoto {
 	width: 200px;
 	height: 200px;
 	transition: 0.3s;
 }
 
-#bodyMenuWrap .bodyMenu .boardPhoto:hover {
+.bodyMenuWrap .bodyMenu .boardPhoto:hover {
 	width: 300px;
 	height: 300px;
 	transition: 0.3s;
@@ -113,11 +113,11 @@ section {
 
 }
 
-#bodyMenuWrap .bodyMenu .boardTitle {
+.bodyMenuWrap .bodyMenu .boardTitle {
 	color: white;
 }
 
-#bodyMenuWrap .bodyMenu .boardText {
+.bodyMenuWrap .bodyMenu .boardText {
 	color: white;
 	font-size: 15px;
 }

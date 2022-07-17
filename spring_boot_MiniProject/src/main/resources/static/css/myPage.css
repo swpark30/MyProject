@@ -2,7 +2,7 @@
 
 /* myPage.css */
 
-#wrapper { /* background:#f8f9fa; */
+.wrapper { /* background:#f8f9fa; */
 	background:#fff;
 }
 
@@ -16,7 +16,7 @@ section {
   	padding-bottom:10%; 
 }
 
-#myPageBox {
+.myPageBox {
 	text-align:left;
 	background:#fff;
 	border-radius:10px;
@@ -29,7 +29,7 @@ section {
 }
 
 
-#myPageBox h1 { 
+.myPageBox h1 { 
 	font-size:2em; 
 	font-weight:bold;
 	line-height:1.4em;
@@ -52,7 +52,7 @@ section {
 	margin-left:2%;
 }
 
-#userBox {
+.userBox {
 	border:0 solid #aaa;
 	box-shadow: 1px 1px 1px 4px #eee; 
 	display:flex;
@@ -65,52 +65,52 @@ section {
 	
 }
 
-#boxImage {
+.boxImage {
 	margin-top:25%;
 	display:flex;
 	
 }
 
-#boxUser {
+.boxUser {
 	margin-bottom:20%;
 	text-align:center;
 	width:60%;
 	
 }
 
-#fontBox {
+.fontBox {
 	display:block;
 }
 
-#fontBox li {
+.fontBox li {
 	margin-bottom:20%;
 }
 
-#fontBox li:first-child {
+.fontBox li:first-child {
 	margin-top:20%;
 	font-size:24px;
 	
 }
 
-#fontBox li:nth-child(2) {
+.fontBox li:nth-child(2) {
 	font-size:20px;
 }
 
 
-#fontBox li:last-child {
+.fontBox li:last-child {
 	color:#aaa;
 	font-weight:bold;
 	font-size:14px;
 }
 
-#pointBox {
+.pointBox {
 	display:flex;
 	justify-content:space-between;
 	width:100%;
 }
 
 
-#pointBox li {
+.pointBox li {
 	display:flex;
 	align-items:center;
 	height:20px;
@@ -118,7 +118,7 @@ section {
 	
 }
 
-#pointBox li:nth-child(2), #pointBox li:nth-child(3){
+.pointBox li:nth-child(2), .pointBox li:nth-child(3){
 	margin-left:10%;
 }
 
@@ -141,14 +141,14 @@ section {
 }
 
 
-#tagAct, #tagCht {
+.tagAct, .tagCht {
 	border:0px solid #aaa;
 	box-shadow: 1px 1px 1px 4px #eee;
 	width:100%;
 	padding:6px 10px; 
 }
 
-#tagAct:focus, #tagCht:focus {
+.tagAct:focus, .tagCht:focus {
 	outline:none;
 	box-shadow: 1px 1px 1px 4px #00a8be;
 	color:#aaa;
@@ -175,44 +175,44 @@ section {
 .tagBox li a:hover span, .userPage li a:hover span  {
 	background:#00a8be;
 }
-#input {margin-top:5%;}
+.input {margin-top:5%;}
 
-#tagAct {margin-bottom:3%;}
+.tagAct {margin-bottom:3%;}
 
 
-#login a {
+.login a {
 	font-weight:bold;
 
 }
  
  
- #userProfileBox {
+ .userProfileBox {
  	display:flex;
 	flex-direction:center;
  }
  
- #userInfo {
+ .userInfo {
  	display:flex;
  	margin:5% 0 0 5%;
  	width:50%;
  }
  
- #userInfo li {
+ .userInfo li {
  	padding:10% 0;
  }
  
- #userInfo li h2 {
+ .userInfo li h2 {
  	font-size:24px;
  }
  
-#userinfoBox {
+.userinfoBox {
 	display:flex;
 	flex-direction:column;
 	width:60%;
 }
 
 
-#userinfoBox li {
+.userinfoBox li {
 	display:flex;
 	align-items:center;
 	

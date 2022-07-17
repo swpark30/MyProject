@@ -5,7 +5,7 @@
  
  $(document).ready(function(){
 	
-	$("#joinBtn").on('click', function(){
+	$(".joinBtn").on('click', function(){
 		
 		
 		// 이름 유효성 검사 함수 
@@ -18,17 +18,17 @@
 
 	  }  // 이름 체크 함수
 	
-		var name = $("#nameInput").val(); 
+		var name = $(".nameInput").val(); 
 
 		if(name==""){
 			alert("이름을 입력해주세요.");
-			$('#nameInput').focus();
+			$('.nameInput').focus();
 		return false;
 		
 		}else{
 		if(!name_check(name)){ 
 			alert("유효하지 않은 이름입니다. 이름을 다시 확인해주세요.");
-			$('#nameInput').focus();
+			$('.nameInput').focus();
 			return false;
 		}
 	}
@@ -43,17 +43,17 @@
 
 	  }  // 닉네임 체크 함수
 	 
-		var nickname = $("#nicknameInput").val(); 
+		var nickname = $(".nicknameInput").val(); 
 
 		if(nickname==""){
 			alert("닉네임을 입력해주세요.");
-			$('#nicknameInput').focus();
+			$('.nicknameInput').focus();
 		return false;
 		
 		}else{
 		if(!nickname_check(nickname)){ 
 			alert("유효하지 않은 닉네임입니다. 한글, 영문, 숫자만 가능하며 2~10자 내로 입력해주세요.");
-			$('#nicknameInput').focus();
+			$('.nicknameInput').focus();
 			return false;
 		}
 	}
@@ -68,17 +68,17 @@
 
 	  }  // 아이디 체크 함수
 	 
-		var id = $("#idInput").val(); 
+		var id = $(".idInput").val(); 
 
 		if(id==""){
 			alert("아이디를 입력해주세요.");
-			$('#idInput').focus();
+			$('.idInput').focus();
 		return false;
 		
 		}else{
 		if(!id_check(id)){ 
 			alert("유효하지 않은 아이디입니다. 6~14 자 내로 입력해주세요.");
-			$('#idInput').focus();
+			$('.idInput').focus();
 			return false;
 		}
 	}
@@ -92,17 +92,17 @@
 
 	  }  // 이메일 체크 함수
 	 
-		var email = $("#emailInput").val(); 
+		var email = $(".emailInput").val(); 
 
 		if(email==""){
 			alert("이메일을 입력해주세요.");
-			$('#emailInput').focus();
+			$('.emailInput').focus();
 		return false;
 		
 		}else{
 		if(!email_check(email)){ 
 			alert("유효하지 않은 이메일입니다. 영문과 숫자를 조합하여 6~14자 내로 입력해주세요.");
-			$('#emailInput').focus();
+			$('.emailInput').focus();
 			return false;
 		}
 	}
@@ -121,21 +121,21 @@
 
 		if(password==""){
 			alert("비밀번호를 입력해주세요.");
-			$('#pwInput').focus();
+			$('.pwInput').focus();
 		return false;
 		
 		}else{
 		if(!pw_check(password)) {
   			alert("유효하지 않은 비밀번호입니다. 하나 이상의 문자와 숫자 특수 문자를 포함하여 8~20자 내로 입력해주세요.");
-  			$('#pwInput').focus();
+  			$('.pwInput').focus();
     		return false;
 		}
 	}
 		
 	// 비밀번호 확인 
-		if($('#pwInput').val() != $('#pwCfmInput').val()){
+		if($('.pwInput').val() != $('.pwCfmInput').val()){
 			alert("비밀번호가 일치하지 않습니다.");
-			$('#pwCfmInput').focus();
+			$('.pwCfmInput').focus();
 			return false;	
 		} // 회원가입 완료 시 
 		alert("회원가입 완료");
@@ -145,27 +145,27 @@
 	}); // joinBtn 클릭 시 
 	
 	// 글자 수 제한
-	$('#nameInput').on('keyup', function(){
+	$('.nameInput').on('keyup', function(){
 		$(this).attr('maxlength', '10');
 	});
 	
-	$('#nicknameInput').on('keyup', function(){
+	$('.nicknameInput').on('keyup', function(){
 		$(this).attr('maxlength', '10');
 	});
 	
-	$('#idInput').on('keyup', function(){
+	$('.idInput').on('keyup', function(){
 		$(this).attr('maxlength', '14');
 	});
 	
-	$('#emailInput').on('keyup', function(){
+	$('.emailInput').on('keyup', function(){
 		$(this).attr('maxlength', '14');
 	});
 	
-	$('#pwInput').on('keyup', function(){
+	$('.pwInput').on('keyup', function(){
 		$(this).attr('maxlength', '20');
 	});
 	
-	$('#pwCfmInput').on('keyup', function(){
+	$('.pwCfmInput').on('keyup', function(){
 		$(this).attr('maxlength', '20');
 	});
 	

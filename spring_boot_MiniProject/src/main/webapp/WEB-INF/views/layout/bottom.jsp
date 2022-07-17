@@ -5,15 +5,15 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>bottom</title>
-		<link rel="stylesheet" type="text/css" href="../css/footer.css">
+		<link rel="stylesheet" type="text/css" href="css/footer.css">
 		<script src="../js/jquery-3.6.0.min.js"></script>
 	</head>
 	<body>
 		<footer>
-			<div id="footerBox">
-				<a href="../index.html"><img src="../image/logo-withus2.png" id="footerlogoImg"></a>
-			<div id="footerulBox">
-				<ul id="withus">
+			<div class="footerBox">
+				<a href="/"><img src="image/logo-withus2.png" class="footerlogoImg"></a>
+			<div class="footerulBox">
+				<ul class="withus">
 					<li>위더스</li>
 					<li>상호명 : <span>With:us</span></li>
 					<li>이용약관 | 개인정보 보호 | 도움말</li>
@@ -21,17 +21,17 @@
 					<li>연락처 : <span>010-1234-5678</span></li>
 					<li>주소 : 서울시 강남구 선릉로</li>
 				</ul>
-				<ul id="siteMap">
+				<ul class="siteMap">
 					<li>SITEMAP</li>
-					<li><a href="../index.html">HOME</a></li>
+					<li><a href="/">HOME</a></li>
 					<li><a href="noticePage.html">NOTICE</a></li>
 					<li><a href="questionPage.html">QUESTION</a></li>
 					<li><a href="talkPage.html">TALK</a></li>
 					<li><a href="ITNewsPage.html">IT NEWS</a></li>
 				</ul>
-				<ul id="contact">
+				<ul class="contact">
 					<li>CONTACT US</li>
-					<li><a href="../index.html">with:us</a></li>
+					<li><a href="/">with:us</a></li>
 					<li><a href="https://github.com/" target="_blank">GIT</a></li>
 				</ul>
 				</div> <!-- footerulBox -->	

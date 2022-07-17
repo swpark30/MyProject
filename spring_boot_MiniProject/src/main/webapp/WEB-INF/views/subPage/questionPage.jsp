@@ -19,15 +19,15 @@
 	<body>
 		<c:import url="/WEB-INF/views/layout/top.jsp"/>
 		<section>
-			<div id="bodyWrap">
-				<div id="questionBoxWrap">
-					<div id="slideShow">
-						 <div id="prevNextButtonBox">
-							<img id="prevButton" class="prevNextButton" src="image/prevButton.png">
-							<img id="nextButton" class="prevNextButton" src="image/nextButton.png">
+			<div class="bodyWrap">
+				<div class="questionBoxWrap">
+					<div class="slideShow">
+						 <div class="prevNextButtonBox">
+							<img class="prevButton prevNextButton" src="image/prevButton.png">
+							<img class="nextButton prevNextButton" src="image/nextButton.png">
 						</div>		
-		                <div id="slideShowBox">
-							<div id="slidePanel">
+		                <div class="slideShowBox">
+							<div class="slidePanel">
 								<img src= "image/slideImage1.jpeg" class="slideImage">
 								<img src= "image/slideImage2.png" class="slideImage">
 								<img src= "image/slideImage3.jpeg" class="slideImage">
@@ -35,7 +35,7 @@
 								<img src= "image/slideImage5.jpeg" class="slideImage">
 							</div>
 						</div>
-						<div id = "controlPanel">
+						<div class = "controlPanel">
 							<img src="image/controlButton1.png" class="controlButton">
 							<img src="image/controlButton1.png" class="controlButton">
 							<img src="image/controlButton1.png" class="controlButton">
@@ -43,8 +43,8 @@
 							<img src="image/controlButton1.png" class="controlButton">
 						</div>
 					</div>
-					<div id="questionBox">
-						<div id="arrayTitle">
+					<div class="questionBox">
+						<div class="arrayTitle">
 							<button class="btnFilter btnFilterActive">최신순</button>
 							<button class="btnFilter">추천순</button>
 							<button class="btnFilter">댓글순</button>
@@ -64,7 +64,7 @@
 							</div>
 							<div class="questionMainBox">
 								<div class="questionTitle">
-									<a href="#"><h2>CSS Layout의 역사</h2></a>
+									<a href="<c:url value='/viewPage'/>"><h2>CSS Layout의 역사</h2></a>
 								</div>
 								<div class="questionText">
 									Flexbox가 2012년도에 나왔습니다. 그 전까지는 얼마나 배치하는게 힘들었을까요.(야매가 아니라면) 센스있는 trick들에 의존했겠죠...
@@ -110,7 +110,7 @@
 						<div class="question">
 						</div>
 					</div>
-					<div id="pageNum">
+					<div class="pageNum">
 						<button class="btnFilter"><<</button>
 						<button class="btnFilter btnFilterActive">1</button>
 						<button class="btnFilter">2</button>
@@ -118,15 +118,15 @@
 						<button class="btnFilter">>></button>
 					</div>
 				</div>
-				<div id="sideBox">
-					<div id="createQuestion">
+				<div class="sideBox">
+					<div class="createQuestion">
 						<a href="<c:url value='/writePage'/>"><button>새 질문 작성하기</button></a>
 					</div >
-					<div id="questionTag">
-						<div id="questionTagTitle">
+					<div class="questionTag">
+						<div class="questionTagTitle">
 							<h2>태그</h2>
 						</div>
-						<div id="sideTagBox">	
+						<div class="sideTagBox">	
 							<div class="Tag">
 								CSS
 							</div>
@@ -156,7 +156,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="hotQuestion">
+					<div class="hotQuestion">
 						<table>
 							<tr><th>핫 게시물</th></tr>
 							<tr><td><a href="#">Java와 JavaScript의 차이점이 뭔가요?....</a></td></tr>

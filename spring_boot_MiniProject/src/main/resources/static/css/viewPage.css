@@ -1,16 +1,5 @@
 @charset "UTF-8";
 
-section {
-	position: relative;
-	top:75px;
-	display: flex;
-	justify-content: center;
-	height: auto;
-	min-height: 100%;
-	padding-bottom:15%;
-	
-}
-
 .listMainWrap {
 	padding: 0;
 	margin: auto;
@@ -32,13 +21,13 @@ section {
 	height: 40px;
 }
 
-.nickNameC{
+.nickNameB{
 	color: black;
 	font-size: 100%; 
 	margin-left:5px;
 	margin-right:5px;
 }
-.createdDateC{
+.createdDateB{
 	font-size: 25%;
 	padding-left:5px;
 }

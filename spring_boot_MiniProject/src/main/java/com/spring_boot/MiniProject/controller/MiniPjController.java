@@ -60,4 +60,10 @@ public class MiniPjController {
 		return "subPage/myPage";
 	}
 	
+	// 뷰페이지 보기
+	@RequestMapping("/viewPage")
+	public String viewViewPage() {
+		return "subPage/viewPage";
+	}
+	
 }

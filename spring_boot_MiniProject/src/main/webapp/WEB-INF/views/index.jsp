@@ -11,21 +11,21 @@
 		<script src="js/index.js"></script>
 	</head>
 	<body>
-		<div id="wrap">
+		<div class="wrap">
 			<header>
-				<div id="mainMenu">
-					<div id="menuImg">
+				<div class="mainMenu">
+					<div class="menuImg">
 						<a href="<c:url value='/'/>"><img src="image/logo-withus.png"></a>
 					</div>
-					<div id="topMenu">
-						<div id="underline"></div>
+					<div class="topMenu">
+						<div class="underline"></div>
 						<a href=<c:url value='/'/>>Home</a>
 						<a href="<c:url value='/noticePage'/>">Notice</a>
 						<a href="<c:url value='/questionPage'/>">Question</a>
 						<a href="<c:url value='/talkPage'/>">Talk</a>
 						<a href="<c:url value='/ITNewsPage'/>">IT News</a>
 					</div>
-					<div id="login">
+					<div class="login">
 						<c:if test="${empty sessionScope.sid}">
 							<a href="<c:url value='/loginForm'/>">로그인</a>
 							<a>|</a>
@@ -41,25 +41,25 @@
 				</div>
 			</header>
 			<section>
-				<div id="sectionWrap">
-					<div id="mainTitle">
+				<div class="sectionWrap">
+					<div class="mainTitle">
 						<h1>
 							With:us
 						</h1>
 					</div>
-					<div id="bodyMenuWrap">
+					<div class="bodyMenuWrap">
 						<div class="bodyMenu">
-							<a href="<c:url value='/noticePage'/>"><img id="noticePhoto" class="boardPhoto" src="image/공지.png"></a>
+							<a href="<c:url value='/noticePage'/>"><img class="boardPhoto" src="image/공지.png"></a>
 							<h2 class="boardTitle">Notice</h2>
 							<p class="boardText">여러가지 공지사항을 확인해보세요</p>
 						</div>
 						<div class="bodyMenu">
-							<a href="<c:url value='/questionPage'/>"><img id="questionPhoto" class="boardPhoto" src="image/질문.png"></a>
+							<a href="<c:url value='/questionPage'/>"><img class="boardPhoto" src="image/질문.png"></a>
 							<h2 class="boardTitle">Question</h2>
 							<p class="boardText">모르는 코딩이나 알려주고 싶은 것이 있으면 서로 질문을 주고 받으세요</p>
 						</div>
 						<div class="bodyMenu">
-							<a href="<c:url value='/talkPage'/>"><img id="TalkPhoto" class="boardPhoto" src="image/Talk.png"></a>
+							<a href="<c:url value='/talkPage'/>"><img class="TalkPhoto boardPhoto" src="image/Talk.png"></a>
 							<h2 class="boardTitle">Talk</h2>
 							<p class="boardText">당신의 고민을 모두 WITH:US에서 <br>함께 이야기해 봐요</p>
 						</div>

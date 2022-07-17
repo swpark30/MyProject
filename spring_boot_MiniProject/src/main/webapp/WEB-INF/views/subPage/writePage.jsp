@@ -70,8 +70,8 @@
 									<div class="col-auto me-auto" style="font-size: 1.5em; color: rgb(112, 190, 248)">
 										<i class="fa-solid fa-lg fa-pen-to-square" style="margin-right:10px"></i>게시물 작성</div>
 									<div class="col-auto">
-										<button id="btn" class="btn-gradient red"  onClick="history.go(-1)">취소</button>
-										<button id="btn" class="btn-gradient cyan"  onClick="history.go(-1)">저장</button>
+										<button class="btn btn-gradient red"  onClick="history.go(-1)">취소</button>
+										<button class="btn btn-gradient cyan"  onClick="history.go(-1)">저장</button>
 									</div>
 								</div>
 							</div>
@@ -99,7 +99,7 @@
 									</div>
 									<div class="row viewSubWrap">
 										<div class="input-group mb-3" style="margin-top: 10px">
-											<select class="form-select" id="inputGroupSelect02">
+											<select class="form-select inputGroupSelect02">
 												<option selected>게시판을 선택해 주세요</option>
 												<option value="1">Notice</option>
 												<option value="2">question</option>
@@ -107,8 +107,8 @@
 											</select>
 										</div>
 										<div class="mb-3">
-											<input type="email" class="form-control"
-												id="exampleFormControlInput1" placeholder="제목을 입력하세요">
+											<input type="email" class="form-control exampleFormControlInput1"
+												 placeholder="제목을 입력하세요">
 										</div>
 										<div>
 											<input name='tags' value='Javascript,css' class="form-control"
@@ -117,7 +117,7 @@
 										<div>
 											<p></p>
 										</div>
-										<div id="summernote"></div>
+										<div class="summernote"></div>
 										<div>
 											<p></p>
 										</div>

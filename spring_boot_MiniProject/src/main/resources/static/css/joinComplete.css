@@ -3,7 +3,7 @@
 /* joinCompleteSection.css */
 
 /* 바디 설정 */
-#wrapper { /* background:#f8f9fa; */
+.wrapper { /* background:#f8f9fa; */
 	background:#fff;
 }
 
@@ -17,7 +17,7 @@ section {
   	padding-bottom:10%;
 }
 
-#loginBox {
+.loginBox {
 	text-align:center;
 	background:#fff;
 	/* border:0px solid #aaa; */
@@ -31,7 +31,7 @@ section {
 }
 
 /* 회원가입 완료  */
-#loginBox h1 { 
+.loginBox h1 { 
 	font-size:2em; 
 	font-weight:bold;
 	line-height:1.4;
@@ -40,27 +40,27 @@ section {
 	
 
 /* 회원가입 로고*/
-#loginBox h2  { 
+.loginBox h2  { 
 	margin-top:3%;
 }
 /* 로고 이미지 사이즈 조정 */
-#loginBox h2 img {
+.loginBox h2 img {
 	width:12%;
 }
 
 /* 안내 간격 조정*/
 
 
-#joinMent {
+.joinMent {
 	margin:5% 0 1% 0;
 }
 
-#loginBox ul li a {
+.loginBox ul li a {
 	font-size:1.50em;
 }
 
 /* 주의 사항 강조 */
-#loginBox ul li a span {
+.loginBox ul li a span {
 	color:#4ba0b5;
 	font-weight:bold;
 	
@@ -69,13 +69,13 @@ section {
 
 
 /* 로그인, 홈 버튼 */
-#loginHomeBtn {
+.loginHomeBtn {
 	display:flex;
 	justify-content:center;
 	
 }
 
-#loginHomeBtn li {
+.loginHomeBtn li {
 	display:flex;
 	
 	height:70%;

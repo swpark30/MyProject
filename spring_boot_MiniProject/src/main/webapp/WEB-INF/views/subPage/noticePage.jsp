@@ -19,12 +19,12 @@
 	<body>
 		<c:import url="/WEB-INF/views/layout/top.jsp"/>
 		<section>
-			<div id="bodyWrap">
-				<div id="createNotice">
+			<div class="bodyWrap">
+				<div class="createNotice">
 					<button>새 공지 작성하기</button>
 				</div>
-				<div id="noticeBox">
-					<div id="arrayTitle">
+				<div class="noticeBox">
+					<div class="arrayTitle">
 						<button class="btnFilter btnFilterActive">최신순</button>
 						<button class="btnFilter">추천순</button>
 						<button class="btnFilter">댓글순</button>
@@ -83,7 +83,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="pageNum">
+				<div class="pageNum">
 					<button class="btnFilter"><<</button>
 					<button class="btnFilter btnFilterActive">1</button>
 					<button class="btnFilter">2</button>

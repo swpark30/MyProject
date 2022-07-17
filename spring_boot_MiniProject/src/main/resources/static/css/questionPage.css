@@ -12,7 +12,7 @@ section {
 	
 }
 
-#bodyWrap {
+.bodyWrap {
 	width:1400px;
 	height: 100%;
 	display: flex;
@@ -24,17 +24,17 @@ a{
 }
 
 /********** 질문 박스 *********/
-#bodyWrap #questionBoxWrap{
+.bodyWrap .questionBoxWrap{
 	width: 1050px;
 }
 
-#bodyWrap #questionBoxWrap #slideShow{
+.bodyWrap .questionBoxWrap .slideShow{
 	margin-top: 50px;
 	position: relative;
 }
 
 /****** 슬라이드쇼 ******/
-#questionBoxWrap #slideShow #prevNextButtonBox{
+.questionBoxWrap .slideShow .prevNextButtonBox{
 	width: 950px;
 	position: absolute;
 	display: flex;
@@ -43,17 +43,17 @@ a{
 	margin-top: 150px;
 }
 
-#prevNextButtonBox .prevNextButton{
+.prevNextButtonBox .prevNextButton{
 	opacity: 0.5;
 	width: 60px;
 	z-index: 10;
 }
-#prevNextButtonBox .prevNextButton:hover{
+.prevNextButtonBox .prevNextButton:hover{
 	opacity: 1;
 	cursor: pointer;
 }
 
-#questionBoxWrap #slideShow #slideShowBox{
+.questionBoxWrap .slideShow .slideShowBox{
 	width: 650px;
 	height: 350px;
 	overflow: hidden;
@@ -61,34 +61,34 @@ a{
 	border-radius: 20px;
 }
 
-#slideShowBox #slidePanel{
+.slideShowBox .slidePanel{
 	position: relative;
 	width: 3250px;
 	height: 350px;
 }
 
-#slideShowBox .animated{
+.slideShowBox .animated{
 	transition: 0.5s ease-out;
 }
 
-#slideShowBox #slidePanel .slideImage {
+.slideShowBox .slidePanel .slideImage {
 	width: 650px;
 	height: 350px;
 	float: left;
 }
 
-#questionBoxWrap #slideShow #controlPanel{
+.questionBoxWrap .slideShow .controlPanel{
 	margin: auto;
 	width: 85px;
 }
 
 /****** 질문 게시글 *****/
-#questionBoxWrap #questionBox{
+.questionBoxWrap .questionBox{
 	width: 1000px;
 	margin: auto;
 }
 
-#questionBox #arrayTitle{
+.questionBox .arrayTitle{
 	margin: 50px 0 0 80px;
 }
 
@@ -115,7 +115,7 @@ a{
 	color: white;
 }
 
-#questionBox .question{
+.questionBox .question{
 	width: 85%;
 	height: 150px;
 	border: 1px solid rgb(216, 216, 216);
@@ -125,7 +125,7 @@ a{
 	display: flex;
 }
 
-#questionBox .question .questionLeftBox{
+.questionBox .question .questionLeftBox{
 	width: 10%;
 	text-align: center;
 }
@@ -175,16 +175,17 @@ a{
 }
 
 .TagAnaTime .questionTagBox .Tag {
-	background-color: rgb(112, 190, 248);
+	background-color: rgb(180, 180, 180);
 	border-radius: 5px;
 	display: inline;
 	padding: 2px 7px;
-	color : #52a3a3;
+	color : white;
 	font-weight: bold;
 }
 
 .TagAnaTime .questionTagBox .Tag:hover {
 	color : white;
+	background-color: rgb(112, 190, 248);
 	cursor: pointer;
 }
 
@@ -203,18 +204,18 @@ a{
 }
 
 
-#bodyWrap #pageNum{
+.bodyWrap .pageNum{
 	text-align: center;
 	margin-top: 50px;
 }
 
 
 /*********** 사이드박스 ********/
-#bodyWrap #sideBox {
+.bodyWrap .sideBox {
 	width: 350px;
 }
 
-#sideBox #createQuestion button {
+.sideBox .createQuestion button {
 	background-color: rgb(112, 190, 248);
 	color: white;
 	border: none;
@@ -226,52 +227,53 @@ a{
 	font-weight: bold;
 }
 
-#sideBox #createQuestion button:hover {
+.sideBox .createQuestion button:hover {
 	cursor: pointer;
 }
 
-#sideBox #questionTag {
+.sideBox .questionTag {
 	width: 90%;
 	margin: auto;
 	margin-top: 30px;
 }
 
-#sideBox #questionTag #questionTagTitle {
+.sideBox .questionTag .questionTagTitle {
 	border-bottom: 1px solid rgb(216, 216, 216);
 }
 
-#sideBox #questionTag #sideTagBox .Tag {
-	background-color: rgb(112, 190, 248);
+.sideBox .questionTag .sideTagBox .Tag {
+	background-color: rgb(180, 180, 180);
 	border-radius: 5px;
 	padding: 2px 7px;
 	display : inline-block;
-	color : #52a3a3;
+	color : white;
 	font-weight: bold;
 	margin: 10px 0;
 }
 
-#sideBox #questionTag #sideTagBox .Tag:hover {
+.sideBox .questionTag .sideTagBox .Tag:hover {
 	color: white;
+	background-color: rgb(112, 190, 248);
 	cursor: pointer;
 }
 
-#sideBox #hotQuestion {
+.sideBox .hotQuestion {
 	position: sticky;
 	top: 85px;
 	margin-top: 50px;
 }
 
-#sideBox #hotQuestion table {
+.sideBox .hotQuestion table {
 	width:90%;	
 	margin: auto;
 }
 
-#sideBox #hotQuestion th {
+.sideBox .hotQuestion th {
 	border-bottom: 1px solid rgb(216, 216, 216);
 	text-align: left;
 	font-size: 20px;
 }
 
-#sideBox #hotQuestion td {
+.sideBox .hotQuestion td {
 	padding-top: 10px;
 }

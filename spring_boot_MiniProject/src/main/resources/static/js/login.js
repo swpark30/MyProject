@@ -2,7 +2,7 @@
  *  로그인
  */
  $(document).ready(function(){
- 	$('#loginForm').on('submit', function(){
+ 	$('.loginForm').on('submit', function(){
  		// submit 이벤트 기본 기능 : 페이지 새로 고침
  		// 기본 기능 중단
  		event.preventDefault();
@@ -10,8 +10,8 @@
  		$.ajax({
  			type:"post",
  			url:"login",
- 			data:{"id":$('#idInput').val(),
- 				  "pwd":$('#pwInput').val()},
+ 			data:{"id":$('.idInput').val(),
+ 				  "pwd":$('.pwInput').val()},
 			dataType:"text",
 			success:function(result){
 				// 성공 시 결과 받음
@@ -34,7 +34,7 @@
 	
 	
 	// 로그인 버튼 클릭 시 
-	$('#loginBtn').on('click',function() {
+	$('.loginBtn').on('click',function() {
 		
 		// 이메일 유효성 검사 함수 
 		function id_check(id) {
@@ -43,17 +43,17 @@
 
 	  }  // 이메일 체크 함수
 	
-		var email = $("#idInput").val(); 
+		var email = $(".idInput").val(); 
 
 		if(email==""){
 			alert("아이디를 입력해주세요.");
-			$('#idInput').focus();
+			$('.idInput').focus();
 		return false;
 		
 		}else{
 		if(!id_check(id)){ // 이메일 함수 체크 호출
 			alert("유효하지 않은 아이디입니다.");
-			$('#idInput').focus();
+			$('.idInput').focus();
 			return false;
 		}
 	}
@@ -71,13 +71,13 @@
 
 		if(password==""){
 			alert("비밀번호를 입력해주세요.");
-			$('#pwInput').focus();
+			$('.pwInput').focus();
 		return false;
 		
 		}else{
 		if(!pw_check(password)) {
   			alert("비밀번호가 일치하지 않습니다.");
-  			$('#pwInput').focus();
+  			$('.pwInput').focus();
     		return false;
 		}
 	} 	// 로그인 성공 시 
@@ -89,17 +89,17 @@
 	
 	
 	// 이메일 비밀번호 글자 수 제한 20
-	$('#emailInput').on('keyup', function(){
+	$('.emailInput').on('keyup', function(){
 		$(this).attr('maxlength', '20');
 	});
 	
-	$('#pwInput').on('keyup', function(){
+	$('.pwInput').on('keyup', function(){
 		$(this).attr('maxlength', '20');
 	});
 	
 	
-	/* const input = document.querySelector("#input");
-	const label = document.querySelector("#label");
+	/* const input = document.querySelector(".input");
+	const label = document.querySelector(".label");
 	LET TOGGLE = FALSE;
 	input.addEventListener("CHANGE",FUNCTION(EVENT){
 		LET A = EVENT.TARGET.VALUE;

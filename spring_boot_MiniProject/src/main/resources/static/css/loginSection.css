@@ -2,7 +2,7 @@
 
 /* section.css */
 
-#wrapper { /* background:#f8f9fa; */
+.wrapper { /* background:#f8f9fa; */
 	background:#fff;
 }
 
@@ -16,7 +16,7 @@ section {
   	padding-bottom:6%;
 }
 
-#loginBox {
+.loginBox {
 	text-align:center;
 	background:#fff;
 	/* border:0px solid #aaa; */
@@ -30,7 +30,7 @@ section {
 }
 
 
-#loginBox h1 { 
+.loginBox h1 { 
 	font-size:2em; 
 	font-weight:bold;
 	line-height:1.4;
@@ -38,23 +38,23 @@ section {
 }
 
 /* 로그인 로고*/
-#loginBox h2  { 
+.loginBox h2  { 
 	margin-top:3%;
 }
 
 /* 로그인 로고 이미지 사이즈 조정 */
-#loginBox h2 img {
+.loginBox h2 img {
 	width:12%;
 	
 }
 
 /* form 간격 조정 */
-#input { 
+.input { 
 	display:inline-block;
 	width:100%;
 }
 
-#loginBtn {
+.loginBtn {
 	margin-top:30px;
 	margin-bottom:30px;
 	width:100%;
@@ -67,12 +67,12 @@ section {
 }
 
 /* 테두리 제거 */
-#emailInput:focus, #pwInput:focus { 
+.emailInput:focus, .pwInput:focus { 
 	outline:none;
 }
 
 /* 아이디 찾기, 회원가입 */
-#joinPass ul li { display:inline-block;
+.joinPass ul li { display:inline-block;
 	color:#808080;
 	height:auto;
 	line-height:auto;
@@ -80,13 +80,13 @@ section {
 }
 
 /* 아이디 찾기, 회원가입 글씨 */
-#joinPass ul li a { 
+.joinPass ul li a { 
 	color:#808080;
 	font-size:14px;
 }
 
 
-#input{
+.input{
 	position:ralative; 
 	height:3.13 em;
 }

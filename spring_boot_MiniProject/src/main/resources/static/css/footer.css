@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 /* footer.css */
-
+ul { list-style-type:none; } 
 /* 헤더에서 섹션 푸터 영역 전까지 감싼 박스 */
-#bodyContent {
+.bodyContent {
 	height: auto;
   min-height: 100%;
   padding-bottom:10%; /* 푸터 영역값 높이에 맞게 같이 설정 */
@@ -19,14 +19,14 @@ footer {
 
 
 /* 전체 ul Box */
-#footerulBox{
+.footerulBox{
 	display:flex; 
 	justify-content:center;
 	padding:0.94em;
 }
 
 /* 로고 */
-#footerlogoImg {
+.footerlogoImg {
 	width:9%;
 	margin-left:34%;
 	margin-top:2%;
@@ -34,16 +34,16 @@ footer {
 }
 
 /* 푸터 테두리 배경 */
-#footerBox {
+.footerBox {
 	background:#eee;
 }
 
 /* 간격 조정 */
-#withus { 
+.withus { 
 	margin-right:5%; 
 }
 
-#siteMap {
+.siteMap {
 	margin-right:5%;
 }
 
@@ -63,17 +63,17 @@ footer ul li a {
 }
 
 /* 첫째 줄 간격 조정 */
-#withus li:first-child {
+.withus li:first-child {
 	font-weight:bold;
 	font-size:100%;
 }
 
-#siteMap li:first-child {
+.siteMap li:first-child {
 	font-weight:bold;
 	font-size:90%;
 }
 
-#contact li:first-child {
+.contact li:first-child {
 	font-weight:bold;
 	font-size:90%;
 }

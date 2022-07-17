@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 
-#chatting {
+.chatting {
 	margin-top: 50px;
 	position: sticky; 
 	top: 75px;

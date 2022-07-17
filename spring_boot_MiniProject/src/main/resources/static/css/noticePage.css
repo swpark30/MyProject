@@ -13,19 +13,19 @@ section {
 
 }
 
-#bodyWrap {
+.bodyWrap {
 	width:1400px;
 	height: 100%;
 	
 }
 
-#bodyWrap #createNotice{
+.bodyWrap .createNotice{
 	display: flex;
 	justify-content: center;
 	margin-top: 100px;
 }
 
-#bodyWrap #createNotice button{
+.bodyWrap .createNotice button{
 	background-color: rgb(112, 190, 248);
 	color: white;
 	border: none;
@@ -36,11 +36,11 @@ section {
 	font-weight: bold;
 }
 
-#bodyWrap #createNotice button:hover{
+.bodyWrap .createNotice button:hover{
 	cursor: pointer;
 }
 
-#noticeBox #arrayTitle{
+.noticeBox .arrayTitle{
 	margin: 50px 0 0 120px; 
 }
 
@@ -67,7 +67,7 @@ section {
 	color: white;
 }
 
-#noticeBox .notice{
+.noticeBox .notice{
 	width: 85%;
 	height: 200px;
 	border: 1px solid rgb(216, 216, 216);
@@ -76,7 +76,7 @@ section {
 	margin-top: 20px;
 }
 
-#noticeBox .notice {
+.noticeBox .notice {
 	width: 85%;
 }
 
@@ -139,7 +139,7 @@ section {
 }
 
 
-#bodyWrap #pageNum{
+.bodyWrap .pageNum{
 	text-align: center;
 	margin-top: 50px;
 }
