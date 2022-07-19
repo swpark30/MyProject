@@ -32,10 +32,10 @@
 								<br>
 								<nav class="listSize" style="padding: 0; margin: auto">
 									<div class="container" style="padding: 10px;">
-										<div class="row">
-											<div class="col-auto">
+										<div class="viewBtnBox row">
+											<div class="viewBtn col-auto">
 												<button id="btn" class="btn-gradient red">삭제</button>
-												<button id="btn" class="btn-gradient cyan">수정</button>
+												<button id="btn" class="btn-gradient blue">수정</button>
 											</div>
 										</div>
 									</div>
@@ -198,7 +198,7 @@
 												</div>
 											</div>
 											<div class="row viewSubWrap">
-												<div class="col-lg-10 col-12">
+												<div class="col-lg-9 col-9">
 													<div class="row">
 														<table style="float: left;">
 															<tr>
@@ -219,9 +219,8 @@
 														</div>
 													</div>
 												</div>
-												<div class="col-auto ms-auto align-self-end"
-													style="margin-right: 10px;">
-													<button id="btn" class="btn-gradient green">등록</button>
+												<div class="col-auto ms-auto align-self-end">
+													<button class="btn btn-gradient blue">등록</button>
 												</div>
 											</div>
 										</div>
@@ -235,11 +234,11 @@
 				</div>
 				<div class="sideBox">
 					<div class="createQuestion">
-						<a href="<c:url value='/writePage'/>"><button>새 질문 작성하기</button></a>
+						<a href="<c:url value='/writePage'/>"><button class="btn-gradient blue">새 질문 작성하기</button></a>
 					</div >
 					<div class="questionTag">
 						<div class="questionTagTitle">
-							<h2>태그</h2>
+							<span>태그</span><span><i class="fa-solid fa-tags"></i></span>
 						</div>
 						<div class="sideTagBox">	
 							<div class="Tag">
@@ -273,22 +272,22 @@
 					</div>
 					<div class="hotQuestion">
 						<table>
-							<tr><th>핫 게시물</th></tr>
-							<tr><td><a href="#">Java와 JavaScript의 차이점이 뭔가요?....</a></td></tr>
-							<tr><td><a href="#">SQL 기본 문법에는 뭐가 있을까요?....</a></td></tr>
-							<tr><td><a href="#">Docker 명령어에는 어떤 것이 있나요?....</a></td></tr>
-							<tr><td><a href="#">C에서 입력값의 끝을 판별할 수 있는...</a></td></tr>
-							<tr><td><a href="#">PWA 를 apk,ipa로 빌드하고싶습니다....</a></td></tr>
-							<tr><td><a href="#">C언어 동적할당변수 sizeof값이 이상한....</a></td></tr>
-							<tr><td><a href="#">트리 순회 질문.....</a></td></tr>
-							<tr><td><a href="#">라우터 관련 네트워킹 동작 과정이 궁....</a></td></tr>
-							<tr><td><a href="#">QueryDSL select 에서 에러가 납니다.....</a></td></tr>
-							<tr><td><a href="#">파이썬 pip 오류 ssl 오류....</a></td></tr>
-							<tr><td><a href="#">초보개발자) 아이패드 네이티브 vs 웹....</a></td></tr>
-							<tr><td><a href="#">카이스트 핀토스 환경설정 질문....</a></td></tr>
-							<tr><td><a href="#">csharp 질문드립니다 한프로젝트에 2개....</a></td></tr>
-							<tr><td><a href="#">리액트 콘솔과 실제화면이 다르게 나....</a></td></tr>
-							<tr><td><a href="#">깃허브 블로그 disqus 댓글기능 관련....</a></td></tr>
+							<tr><th>핫 게시물  <i class="fa-brands fa-hotjar"></i></th></tr>
+							<tr><td><i class="fa-regular fa-thumbs-up"></i><span>30</span>&nbsp;&nbsp;<a href="#">Java와 JavaScript의 차이점이 뭔가요?....</a></td></tr>
+							<tr><td><i class="fa-regular fa-thumbs-up"></i><span>26</span>&nbsp;&nbsp;<a href="#">SQL 기본 문법에는 뭐가 있을까요?....</a></td></tr>
+							<tr><td><i class="fa-regular fa-thumbs-up"></i><span>24</span>&nbsp;&nbsp;<a href="#">Docker 명령어에는 어떤 것이 있나요?....</a></td></tr>
+							<tr><td><i class="fa-regular fa-thumbs-up"></i><span>22</span>&nbsp;&nbsp;<a href="#">C에서 입력값의 끝을 판별할 수 있는...</a></td></tr>
+							<tr><td><i class="fa-regular fa-thumbs-up"></i><span>21</span>&nbsp;&nbsp;<a href="#">PWA 를 apk,ipa로 빌드하고싶습니다....</a></td></tr>
+							<tr><td><i class="fa-regular fa-thumbs-up"></i><span>18</span>&nbsp;&nbsp;<a href="#">C언어 동적할당변수 sizeof값이 이상...</a></td></tr>
+							<tr><td><i class="fa-regular fa-thumbs-up"></i><span>15</span>&nbsp;&nbsp;<a href="#">트리 순회 질문.....</a></td></tr>
+							<tr><td><i class="fa-regular fa-thumbs-up"></i><span>14</span>&nbsp;&nbsp;<a href="#">라우터 관련 네트워킹 동작 과정이 궁....</a></td></tr>
+							<tr><td><i class="fa-regular fa-thumbs-up"></i><span>11</span>&nbsp;&nbsp;<a href="#">QueryDSL select 에서 에러가 납니다.....</a></td></tr>
+							<tr><td><i class="fa-regular fa-thumbs-up"></i><span>8</span>&nbsp;&nbsp;<a href="#">파이썬 pip 오류 ssl 오류....</a></td></tr>
+							<tr><td><i class="fa-regular fa-thumbs-up"></i><span>6</span>&nbsp;&nbsp;<a href="#">초보개발자) 아이패드 네이티브 vs 웹....</a></td></tr>
+							<tr><td><i class="fa-regular fa-thumbs-up"></i><span>5</span>&nbsp;&nbsp;<a href="#">카이스트 핀토스 환경설정 질문....</a></td></tr>
+							<tr><td><i class="fa-regular fa-thumbs-up"></i><span>3</span>&nbsp;&nbsp;<a href="#">csharp 질문드립니다 한프로젝트에 2개....</a></td></tr>
+							<tr><td><i class="fa-regular fa-thumbs-up"></i><span>2</span>&nbsp;&nbsp;<a href="#">리액트 콘솔과 실제화면이 다르게 나....</a></td></tr>
+							<tr><td><i class="fa-regular fa-thumbs-up"></i><span>1</span>&nbsp;&nbsp;<a href="#">깃허브 블로그 disqus 댓글기능 관련....</a></td></tr>
 						</table>
 					</div>
 				</div>

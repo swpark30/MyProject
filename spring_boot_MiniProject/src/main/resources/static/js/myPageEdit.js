@@ -1,39 +1,24 @@
-/**
- *  회원가입
+ /**
+ *  마이페이지
  */
  
  
  $(document).ready(function(){
 	
-	$(".joinBtn").on('click', function(){
-		
-		
-		// 이름 유효성 검사 함수 
-		function name_check(name) {
-		
-		// 이름 정규식 	
-		var reg_name = /^[a-zA-Zㄱ-힣][a-zA-Zㄱ-힣 ]*$/; 
- 
-		return reg_name.test(name);
+	
+	$(document).on("change", ".file-input", function(){
+   
+    $filename = $(this).val();
 
-	  }  // 이름 체크 함수
-	
-		var name = $(".nameInput").val(); 
+    if($filename == "")
+      $filename = "파일을 선택해주세요.";
 
-		if(name==""){
-			alert("이름을 입력해주세요.");
-			$('.nameInput').focus();
-		return false;
+    $(".filename").text($filename);
+
+  }); // change
+	
+	$(".editBtn").on('click', function(){
 		
-		}else{
-		if(!name_check(name)){ 
-			alert("유효하지 않은 이름입니다. 이름을 다시 확인해주세요.");
-			$('.nameInput').focus();
-			return false;
-		}
-	}
-	
-	
 		// 닉네임 유효성 검사 함수 
 		function nickname_check(nickname) {
 		
@@ -59,65 +44,15 @@
 	}
 		
 	
-		// 아이디 유효성 검사 함수 
-		function id_check(id) {
-		
-		// 아이디 정규식 	
-		var reg_id = /^[a-z]+[a-z0-9]{5,14}$/g; // 첫 글자 영문으로 시작 영문, 숫자만 가능하며 6-20자 
-		return reg_id.test(id);
-
-	  }  // 아이디 체크 함수
-	 
-		var id = $(".idInput").val(); 
-
-		if(id==""){
-			alert("아이디를 입력해주세요.");
-			$('.idInput').focus();
-		return false;
-		
-		}else{
-		if(!id_check(id)){ 
-			alert("유효하지 않은 아이디입니다. 6~14 자 내로 입력해주세요.");
-			$('.idInput').focus();
-			return false;
-		}
-	}
-	
-	// 이메일 유효성 검사 함수 
-		function email_check(email) {
-		
-		// 이메일 정규식 	
-		var reg_email = /^[a-z]+[a-z0-9]{5,14}$/g; // 첫 글자 영문으로 시작 영문, 숫자만 가능하며 6-20자 
-		return reg_email.test(email);
-
-	  }  // 이메일 체크 함수
-	 
-		var email = $(".emailInput").val(); 
-
-		if(email==""){
-			alert("이메일을 입력해주세요.");
-			$('.emailInput').focus();
-		return false;
-		
-		}else{
-		if(!email_check(email)){ 
-			alert("유효하지 않은 이메일입니다. 영문과 숫자를 조합하여 6~14자 내로 입력해주세요.");
-			$('.emailInput').focus();
-			return false;
-		}
-	}
-	
 	
 		// 비밀번호 유효성 검사 함수 
 		function pw_check(password) {
   		// 최소 8 자, 20자 이하 하나 이상의 문자, 하나의 숫자 및 하나의 특수 문자 정규식
   		var reg_pw =/^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
-  		
+  	
   		return reg_pw.test(password);
   	
-}
-
-		var password = $(".pwInput").val(); 
+}		var password = $("#pwInput").val(); 
 
 		if(password==""){
 			alert("비밀번호를 입력해주세요.");
@@ -137,18 +72,17 @@
 			alert("비밀번호가 일치하지 않습니다.");
 			$('.pwCfmInput').focus();
 			return false;	
-		} else {
-		// 회원가입 완료 시 
-			alert("회원가입 완료");
-			window.location.href="/joinComplete";
-		}	
-		
-	
+		} // 회원가입 완료 시 
+		alert("회원가입 완료");
+		window.location.href="joinComplete.html"; 
+			
+		 
 	}); // joinBtn 클릭 시 
 	
 	// 글자 수 제한
+	
 	$('.nameInput').on('keyup', function(){
-		$(this).attr('maxlength', '16');
+		$(this).attr('maxlength', '10');
 	});
 	
 	$('.nicknameInput').on('keyup', function(){
@@ -173,3 +107,4 @@
 	
 	
 }); // document.ready
+ 

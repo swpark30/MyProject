@@ -33,7 +33,7 @@ section {
 	font-size:2em; 
 	font-weight:bold;
 	line-height:1.4em;
-	
+	font-family: 'Jua', sans-serif;
 }
 
 .userPage { 
@@ -62,7 +62,7 @@ section {
 	height:55%;
 	line-height:55%;
 	justify-content:space-between;
-	
+	font-family: 'Jua', sans-serif;
 }
 
 .boxImage {
@@ -150,7 +150,7 @@ section {
 
 .tagAct:focus, .tagCht:focus {
 	outline:none;
-	box-shadow: 1px 1px 1px 4px #00a8be;
+	box-shadow: 1px 1px 1px 4px rgba(102,152,203,1);
 	color:#aaa;
 	font-size:20px;
 }
@@ -163,7 +163,7 @@ section {
 }
 
 .userPage li:first-child a span, .tagBox li:first-child a span{
-	background:#00a8be;
+	background:rgba(102,152,203,1);
 }
 
 .tagBox li a span, .userPage li a span {
@@ -173,7 +173,7 @@ section {
 }
 
 .tagBox li a:hover span, .userPage li a:hover span  {
-	background:#00a8be;
+	background:rgba(102,152,203,1);
 }
 .input {margin-top:5%;}
 

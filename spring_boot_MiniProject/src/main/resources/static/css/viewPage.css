@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+
+.viewBtn {
+	margin-left: 500px; 
+}
+
 .listMainWrap {
 	padding: 0;
 	margin: auto;
@@ -8,7 +13,7 @@
 
 
 .viewSubWrap {
-	border: 2px solid  rgb(112, 190, 248);
+	border: 2px solid  rgba(102,152,203,1);
 	margin-top: -4px;
 	padding: 10px;
 	background-color: white;

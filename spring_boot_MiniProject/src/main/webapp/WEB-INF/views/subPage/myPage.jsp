@@ -19,7 +19,7 @@
 					
 					<ul class="userPage">
 						<li><a href="#"><span>activity</span></a></li>
-						<li><a href="#"><span>edit</span></a></li>
+						<li><a href="<c:url value='/myPageEdit'/>"><span>edit</span></a></li>
 					</ul> <!-- userPage -->
 				<div class="userProfileBox">
 					<div class="userBox">

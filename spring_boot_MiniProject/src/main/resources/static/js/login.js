@@ -1,7 +1,9 @@
 /**
  *  로그인
  */
+ 
  $(document).ready(function(){
+	
  	$('.loginForm').on('submit', function(){
  		// submit 이벤트 기본 기능 : 페이지 새로 고침
  		// 기본 기능 중단
@@ -28,46 +30,47 @@
 			},
  		});
  	});
- });
+
  
- $(document).ready(function(){
-	
 	
 	// 로그인 버튼 클릭 시 
 	$('.loginBtn').on('click',function() {
 		
-		// 이메일 유효성 검사 함수 
+		// 아이디 유효성 검사 함수 
 		function id_check(id) {
-		 	
+		
+		// 아이디 정규식 	
+		var reg_id = /^[a-z]+[a-z0-9]{5,14}$/g; // 첫 글자 영문으로 시작 영문, 숫자만 가능하며 6-20자 
 		return reg_id.test(id);
 
-	  }  // 이메일 체크 함수
-	
-		var email = $(".idInput").val(); 
+	  }  // 아이디 체크 함수
+	 
+		var id = $(".idInput").val(); 
 
-		if(email==""){
+		if(id==""){
 			alert("아이디를 입력해주세요.");
 			$('.idInput').focus();
 		return false;
 		
 		}else{
-		if(!id_check(id)){ // 이메일 함수 체크 호출
-			alert("유효하지 않은 아이디입니다.");
+		if(!id_check(id)){ 
+			alert("유효하지 않은 아이디입니다. 6~14 자 내로 입력해주세요.");
 			$('.idInput').focus();
 			return false;
 		}
 	}
+	
 		
 		// 비밀번호 유효성 검사 함수 
 		function pw_check(password) {
   		
   		// 최소 8 자, 20자 이하 하나 이상의 문자, 하나의 숫자 및 하나의 특수 문자 정규식
-  		var reg_pw = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,20}$/;
+  		var reg_pw =/^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
   		
   		return reg_pw.test(password);
   	
 	}
-		var password = $("#pwInput").val(); 
+		var password = $(".pwInput").val(); 
 
 		if(password==""){
 			alert("비밀번호를 입력해주세요.");
@@ -82,7 +85,7 @@
 		}
 	} 	// 로그인 성공 시 
 		alert("로그인 성공");
-		window.location.href="../index.html";
+		window.location.href="/";
 		
 
 }); // loginBtn submit 이벤트
@@ -96,23 +99,6 @@
 	$('.pwInput').on('keyup', function(){
 		$(this).attr('maxlength', '20');
 	});
-	
-	
-	/* const input = document.querySelector(".input");
-	const label = document.querySelector(".label");
-	LET TOGGLE = FALSE;
-	input.addEventListener("CHANGE",FUNCTION(EVENT){
-		LET A = EVENT.TARGET.VALUE;
-		IF(A.LENGTH > 0){
-			ABEL.CLASSLIST.ADD("가만히 있는 CSS")
-			TOGGLE = TRUE
-		} ELSE IF (TOGGLE && A.LENGTH =< 0) {
-			LABEL.CLASSLIST.REMOVE(".GG")
-					}
-	}) */
-	
-	
-
 	
 	
 }); // document.ready 
