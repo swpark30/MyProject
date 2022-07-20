@@ -42,8 +42,6 @@
 			return false;
 		}
 	}
-		
-	
 	
 		// 비밀번호 유효성 검사 함수 
 		function pw_check(password) {
@@ -108,3 +106,10 @@
 	
 }); // document.ready
  
+ 
+ $(document).ready(function() {
+	// 비밀번호 변경 토글
+	$('.pwdBtn').click(function(){
+	$('.passwordBox').slideToggle();		
+	}); 
+});

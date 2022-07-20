@@ -101,24 +101,27 @@
 								
 							</div> <!-- emailSelectBox -->
 						</div>	<!-- emailBox  -->
-					
-						<div class ="windowFontBox"> 
-							<span>비밀번호</span>
-							<div class="inputEvent">
-								<input type="password" class="pwInput">
-								<i></i>
-							</div> <!-- inputEvent  -->	
-							<a class="pwMent">8자~20자 이내, 영문,숫자,특수문자를 혼합하여 입력해주세요.</a> <!-- pwMent -->
-						</div> <!-- windowFontBox -->
-						
-						<div class ="windowFontBox"> 
-							<span>비밀번호 확인</span>
-							<div class="inputEvent">
-								<input type="password" class="pwCfmInput">
-								<i></i>
-							</div>	<!-- inputEvent -->
-						</div> <!-- windowFontBox -->
-						
+						<div class="pwdBtnBox">
+							<input type="button" class="pwdBtn btn-gradient blue" value="비밀번호 변경">
+						</div>
+						<div class="passwordBox">
+							<div class ="windowFontBox"> 
+								<span>새 비밀번호</span>
+								<div class="inputEvent">
+									<input type="password" class="pwInput">
+									<i></i>
+								</div> <!-- inputEvent  -->	
+								<a class="pwMent">8자~20자 이내, 영문,숫자,특수문자를 혼합하여 입력해주세요.</a> <!-- pwMent -->
+							</div> <!-- windowFontBox -->
+							
+							<div class ="windowFontBox"> 
+								<span>새 비밀번호 확인</span>
+								<div class="inputEvent">
+									<input type="password" class="pwCfmInput">
+									<i></i>
+								</div>	<!-- inputEvent -->
+							</div> <!-- windowFontBox -->
+						</div>
 						<div class="btnBox">
 							<input type="submit" class="editBtn btn-gradient blue" value="수정">
 							<input type="reset" class="resetBtn btn-gradient red" value="취소">

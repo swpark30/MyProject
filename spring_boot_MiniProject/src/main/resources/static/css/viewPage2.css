@@ -106,7 +106,8 @@ a{
 
 .sideBox .hotQuestion td {
 	padding-top: 10px;
-	font-size: 14px;
+	font-size: 18px;
+	font-family: 'Nanum Pen Script', cursive;
 }
 
 .sideBox .hotQuestion td i {

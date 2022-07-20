@@ -36,7 +36,7 @@
 						<a>|</a>
 						<a href="<c:url value='/myPage'/>">마이페이지</a>
 						<a>|</a>
-						<a href="<c:url value='/adminPage'/>">관리자</a>
+						<a href="<c:url value='/adminUser'/>">관리자</a>
 					</c:if>
 				</div>
 			</div>

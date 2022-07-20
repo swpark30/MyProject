@@ -339,6 +339,14 @@ section {
 	margin-left:5%;
 } 
 
+.pwdBtnBox {
+	margin-top: 30px;
+}
+
+.passwordBox {
+	display: none;
+}
+
 /* 비밀번호 설명 */
 .pwMent { 
 	margin-top:2%;

@@ -23,7 +23,7 @@
 					<span class="colorFont">개인정보취급방침</span>에 동의하게 됩니다.<br><br>
 					가입 후 아이디는 변경할 수 없습니다.
 				</h4>
-				<form method="post" class="joinFrm" name="joinFrm">
+				<form method="post" class="joinFrm" name="joinFrm" action="/joinComplete">
 					<div class="inputBox">
 						<div class="windowFontBox">
 							<span>이름</span>

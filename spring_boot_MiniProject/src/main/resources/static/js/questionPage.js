@@ -87,7 +87,7 @@ $(document).ready(function(){
 		var translateValue = -slideWidth*slideCount;
 		slides.style.transform = 'translateX(' + translateValue + 'px)';
 	}
-	
+
 	nextBtn.addEventListener('click',function(){
 		moveSlide(currentIdx + 1);
 	})
@@ -110,6 +110,10 @@ $(document).ready(function(){
 				slides.classList.add('animated');
 			},550);
 		}
+
+	}
+	
+	function moveControl(){
 		
 	}
 });

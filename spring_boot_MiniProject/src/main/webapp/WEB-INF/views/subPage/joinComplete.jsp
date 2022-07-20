@@ -27,8 +27,7 @@
 					</ul> <!-- joinMent -->
 					
 					<ul class="loginHomeBtn">
-						<li><input type="button" class="loginBtn btn-gradient cyan" value="로그인"></li>
-						<li><input type="button" class="homeBtn btn-gradient " value="홈으로"></li>
+						<li><a href="<c:url value='/'/>"><input type="button" class="homeBtn btn-gradient " value="홈으로"></a></li>
 					</ul>
 				</div> <!-- joinMentBtn -->
 			</div><!--loginBox  -->

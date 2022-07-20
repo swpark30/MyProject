@@ -67,7 +67,7 @@
 						<nav class="listSize" style="padding: 0; margin: auto">
 							<div class="container" style="padding: 10px;">
 								<div class="row">
-									<div class="col-auto me-auto" style="font-size: 1.5em; color: rgb(112, 190, 248)">
+									<div class="col-auto me-auto" style="font-size: 1.5em; color: rgba(102,152,203,1)">
 										<i class="fa-solid fa-lg fa-pen-to-square" style="margin-right:10px"></i>게시물 작성</div>
 									<div class="col-auto">
 										<button class="btn btn-gradient red"  onClick="history.go(-1)">취소</button>

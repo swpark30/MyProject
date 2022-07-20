@@ -9,12 +9,12 @@
 
 section { 
 	position: relative;
-	top:75px;
+	top:100px;
 	display:flex; 
 	justify-content:center; 
 	height : auto;
   	min-height: 100%;
-  	padding-bottom:10%;
+  	padding-bottom:13%;
 }
 
 .loginBox {
@@ -36,6 +36,7 @@ section {
 	font-weight:bold;
 	line-height:1.4;
 	margin-bottom:5px;
+	font-family: 'Jua', sans-serif;
 }
 	
 
@@ -53,6 +54,7 @@ section {
 
 .joinMent {
 	margin:5% 0 1% 0;
+	font-family: 'Jua', sans-serif;
 }
 
 .loginBox ul li a {
@@ -61,7 +63,7 @@ section {
 
 /* 주의 사항 강조 */
 .loginBox ul li a span {
-	color:#4ba0b5;
+	color:rgba(102,152,203,1);
 	font-weight:bold;
 	
 }

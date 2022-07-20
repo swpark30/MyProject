@@ -15,7 +15,7 @@ import com.spring_boot.MiniProject.service.MemberService;
 
 @Controller
 public class MemberController {
-	
+	/*
 	@Autowired
 	MemberService memService;
 	
@@ -40,6 +40,6 @@ public class MemberController {
 		session.invalidate();
 		return "redirect:/";
 	}
-
+	 */
 }
 

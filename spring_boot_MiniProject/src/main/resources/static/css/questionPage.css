@@ -75,11 +75,11 @@ a{
 
 /****** 슬라이드쇼 ******/
 .questionBoxWrap .slideShow .prevNextButtonBox{
-	width: 950px;
+	width: 880px;
 	position: absolute;
 	display: flex;
 	justify-content: space-between;
-	margin-left: 50px;
+	margin-left: 85px;
 	margin-top: 150px;
 }
 

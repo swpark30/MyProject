@@ -40,6 +40,8 @@
 							<a href="<c:url value='/logout'/>">로그아웃</a> 
 							<a>|</a>
 							<a href="<c:url value='/myPage'/>">마이페이지</a>
+							<a>|</a>
+						<a href="<c:url value='/adminUser'/>">관리자</a>
 						</c:if>
 					</div>
 				</div>

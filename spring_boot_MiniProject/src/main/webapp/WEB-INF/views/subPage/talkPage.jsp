@@ -236,31 +236,22 @@
 				<div class="createTalk">
 					<a href="<c:url value='/writePage'/>"><button class="btn-gradient blue">새 글 작성하기</button></a>
 				</div>
-				<div class="chatting">
-					<div class="chat_wrap">
-						<div class="header">CHAT</div>
-						<div class="chat">
-							<ul>
-							</ul>
-						</div>
-						<div class="input-div">
-							<textarea placeholder="Press Enter for send message."></textarea>
-						</div>
-						<!-- format -->
-						<div class="chat format">
-							<ul>
-								<li>
-									<div class="sender">
-										<span></span>
-									</div>
-									<div class="message">
-										<span></span>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+				<div class="chatWrap">
+		            <div class="chatHeader">Chat</div>
+		            <div class="chatView">
+		                <div class="anotherMsg">
+		                    <span class="anotherName">Jo</span>
+		                    <span class="msg">Hello, Nice to meet you.</span>
+		                </div>
+		                <div class="myMsg">
+		                    <span class="msg">Nice to meet you, too.</span>
+		                </div>
+		            </div>
+		            <form class="chatForm">
+		                <input type="text" autocomplete="off" class="message" placeholder="메시지를 입력하세요">
+		                <input type="submit" value="보내기">
+		            </form>
+		        </div>
 			</div>
 		</div>
 	</section>
