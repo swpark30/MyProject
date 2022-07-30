@@ -11,10 +11,12 @@ public class UserVO {
 	private String userName;
 	private String userEmail;
 	private String userImg;
+	
 	@DateTimeFormat(pattern="yyyy-MM-dd hh:mm:ss")
 	private Date userActivateDate;
 	@DateTimeFormat(pattern="yyyy-MM-dd hh:mm:ss")
 	private Date userCreatedDate;
+	
 	private String userNickname;
 	private String userCompany;
 	private int roll;	// 0:일반유저/1:관리자

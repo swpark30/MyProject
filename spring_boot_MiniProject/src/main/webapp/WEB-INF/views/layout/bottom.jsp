@@ -1,16 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>bottom</title>
-		<link rel="stylesheet" type="text/css" href="css/footer.css">
+		<link rel="stylesheet" type="text/css" href="<c:url value='/css/footer.css'/>" >
 	</head>
 	<body>
 		<footer>
 			<div class="footerBox">
-				<a href="/"><img src="image/logo-withus2.png" class="footerlogoImg"></a>
+				<a href="<c:url value='/'/>" ><img src="<c:url value='/image/logo-withus2.png'/> " class="footerlogoImg"></a>
 			<div class="footerulBox">
 				<ul class="withus">
 					<li>위더스</li>

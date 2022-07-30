@@ -9,7 +9,7 @@
 		<title>아이디 찾기</title>
 		<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
 		<script src="<c:url value='/js/MenuTab.js'/>"></script>
-		<script src="<c:url value='/js/idSearch.js'/>"></script>
+		<script src="<c:url value='/js/searchForm.js'/>"></script>
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/reset.css'/>">
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/common.css'/>">
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/idpwSearch.css'/>">
@@ -27,12 +27,12 @@
 					<span class="colorFont">인증된 이메일</span>만 정보 찾기가 가능합니다.
 				</h4>
 				
-				<form method="post" class="joinFrm" name="joinFrm">
+				<form method="post" id="idSchFrm" class="idSchFrm" name="idSchFrm">
 					<div class="inputBox">
 						<div class="windowFontBox">
 							<span>이름</span>
 							<div class="inputEvent">
-								<input type="text" class="nameInput" required autofocus/>
+								<input type="text" id=userName class="userName" required autofocus/>
 								<i></i>
 							</div><!--inputEvent  -->
 						</div> <!-- "windowFontBox" -->	
@@ -41,24 +41,23 @@
 							<div class ="windowFontBox"> 	
 								<span>이메일</span>
 								<div class="inputEvent">
-									<input type="text" class="emailInput" required/>
+									<input type="text" id="userEmail1" class="userEmail" required/>
 									<i></i>
 								</div> <!-- inputEvent -->
 								&nbsp;&nbsp;
 							</div> <!-- windowFontBox -->
 							
 							<div class="emailSelectBox">
-								<select class="emailSelect">
-									<option value="naver" selected>@naver.com</option>
-									<option value="daum">@daum.net</option>
-									<option value="nate">@nate.com</option>
-									<option value="kakao">@kakao.com</option>
-									<option value="gmail">@gmail.com</option>
+								<select id="userEmail2" class="emailSelect">
+									<option value="naver.com" selected>@naver.com</option>
+									<option value="daum.net">@daum.net</option>
+									<option value="nate.com">@nate.com</option>
+									<option value="kakao.com">@kakao.com</option>
+									<option value="gmail.com">@gmail.com</option>
 								</select>
 							</div> <!-- emailSelectBox -->
 						</div>	<!-- emailBox  -->
 				
-							
 						<input type="submit" class="joinBtn btn-gradient blue" value="확인">
 					</div> <!-- inputBox -->
 				</form>

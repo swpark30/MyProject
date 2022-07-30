@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<c:import url="/WEB-INF/views/layout_test/top.jsp"/>
+			<c:import url="/WEB-INF/views/layout/top.jsp"/>
 			<section>
 				<div class="loginBox">
 				<h1>새 비밀번호</h1> 
@@ -49,7 +49,7 @@
 				</form>
 			</div><!--loginBox  -->
 			</section>
-			<c:import url="/WEB-INF/views/layout_test/bottom.jsp"/>
+			<c:import url="/WEB-INF/views/layout/bottom.jsp"/>
 		</div>
 	</body>
 </html>

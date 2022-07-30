@@ -19,6 +19,18 @@ public interface INoteService {
 	void updateNoteView(int noteId);
 
 	ArrayList<NoteVO> selectQuestionNoteList(int page);
+	
+	ArrayList<NoteVO> selectNoteListTitle(int page,int category, String title, String filter);
+	
+	int selectNoteListTitleCount(String title,int category);
+	
+	ArrayList<NoteVO> selectNoteUserList(int page,int category, String title, String filter, String userId);
+	
+	int selectNoteUserListCount(String title,int category, String userId);
+	
+	ArrayList<NoteVO> selectNoteListHashtag(int page,int category, String title, String tag, String filter);
+	
+	int selectNoteListHashtagCount(String title, int category, String tag);
 
 	ArrayList<NoteVO> selectUserWriteQuestionNoteList(String userId);
 
@@ -54,5 +66,11 @@ public interface INoteService {
 	void deleteComment(CommentVO vo);
 	
 	ArrayList<CommentVO> selectAllComment(int noteId);
+	
+	void updateNoteCommentPlus(int noteId);
+	
+	void updateNoteCommentMinus(int noteId);
+	
+	int selectNoteId(int commentId);
 
 }

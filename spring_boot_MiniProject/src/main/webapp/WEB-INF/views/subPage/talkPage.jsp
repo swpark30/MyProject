@@ -7,19 +7,21 @@
 <meta charset="UTF-8">
 <title>TalkPage</title>
 <link rel="stylesheet" type="text/css" href="css/talkPage.css">
-<script src="js/jquery-3.6.0.min.js"></script>
+<script src="<c:url value='js/jquery-3.6.0.min.js'/>" ></script>
 <script src="js/talkPage.js"></script>
 <link href="image/logo.png" rel="shortcut icon" type="image/x-icon">
-<script src="json/dummyData.json" type="text/javascript"></script>
 <script src="js/tabMenu.js"></script>
 <script src="js/session.js"></script>
 <script src="js/chatting.js"></script>
+<script src="js/server.js"></script>
+<script src="<c:url value='/js/talkPaging.js'/> "></script>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 	rel="stylesheet">
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/51724f5bf4.js"></script>
+<script src="/socket.io/socket.io.js"></script>
 <link rel="stylesheet" type="text/css" href="css/common.css">
 <link rel="stylesheet" type="text/css" href="css/buttonD.css">
 <link rel="stylesheet" type="text/css" href="css/buttonE.css">
@@ -38,17 +40,15 @@
 							<div class="searchBox col-lg-6 col-12"
 								style="height: auto; padding: 11px">
 								<form class="d-flex">
-									<input class="form-control" type="search"
-										placeholder="검색어를 입력하세요" aria-label="Search">
-									<button class="btnSearch">
-										<i class="fa-solid fa-magnifying-glass"></i>
-									</button>
+									<input id="titleSearch" class="form-control" type="search" placeholder="검색어를 입력하세요" aria-label="Search">
+                           			<button class="btnSearch" onclick="titleSearchBtn()">
+                              			<i class="fa-solid fa-magnifying-glass"></i>
+                           			</button>
 								</form>
 							</div>
 						</nav>
 						<div class="row" style="margin: 10px;">
-							<div class="col-lg-2"></div>
-							<div class="col-lg-8 col-12">
+							<div class="col-11">
 								<div id="carouselExampleCaptions" class="carousel slide"
 									data-bs-ride="carousel">
 									<div class="carousel-indicators">
@@ -64,30 +64,32 @@
 											data-bs-slide-to="2" aria-label="Slide 3"></button>
 									</div>
 									<div class="carousel-inner">
+										
 										<div class="carousel-item active">
-											<img src="http://blog.jinbo.net/attach/615/200937431.jpg"
-												class="d-block w-100" alt="...">
-											<div class="carousel-caption d-none d-md-block">
-												<h5>제목1</h5>
-												<p>Username1</p>
-											</div>
-										</div>
-										<div class="carousel-item">
-											<a href='#'><img
-												src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg"
+											<a href="http://localhost:8080/viewPage/59"><img src="http://localhost:8080/summernote_upload/21bc13fe-e01a-4c6e-8973-569740e68a16.png"
 												class="d-block w-100" alt="..."></a>
 											<div class="carousel-caption d-none d-md-block">
-												<h5>제목2</h5>
-												<p>Username2</p>
+												<h5>몰?루의 산수교실</h5>
+												<p>일반유저2</p>
+											</div>
+										</div>
+										
+										<div class="carousel-item">
+											<a href='http://localhost:8080/viewPage/62'><img
+												src="http://localhost:8080/summernote_upload/c69b7c05-75e7-4e15-aa32-17c0c58a70d7.jpg"
+												class="d-block w-100" alt="..."></a>
+											<div class="carousel-caption d-none d-md-block">
+												<h5>일합시다!2</h5>
+												<p>일반유저2</p>
 											</div>
 										</div>
 										<div class="carousel-item">
-											<img
-												src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile28.uf.tistory.com%2Fimage%2F273FD73655215003301686"
-												class="d-block w-100" alt="...">
+											<a href="http://localhost:8080/viewPage/65"><img
+												src="http://localhost:8080/summernote_upload/1eb35378-c7f6-425e-946d-9d1e52ad2131.jpg"
+												class="d-block w-100" alt="..."></a>
 											<div class="carousel-caption d-none d-md-block">
-												<h5>제목3</h5>
-												<p>Username3</p>
+												<h5>포켓몬빵,띠부씰</h5>
+												<p>일반유저</p>
 											</div>
 										</div>
 									</div>
@@ -107,151 +109,46 @@
 									<div class="col-lg-7 col-md-7 me-auto col-12 align-self-end"
 										style="height: auto; font-size: 0.7em;">
 										<div style="display: flex;">
-											<button class="btnFilter btnFilterActive">최신순</button>
-											<button class="btnFilter">추천순</button>
-											<button class="btnFilter">댓글순</button>
-											<button class="btnFilter">조회순</button>
+											<div class="arrayTitle">
+												<button id="btn-noteId" class="btnFilter btnFilterActive">최신순</button>
+												<button id="btn-noteLike" class="btnFilter">추천순</button>
+												<button id="btn-noteCommentNum" class="btnFilter">댓글순</button>
+												<button id="btn-noteView" class="btnFilter">조회순</button>
+											</div>
 										</div>
 									</div>
 									<div class="col-lg-5 col-md-5 col-12" style="height: auto;">
 
 									</div>
 								</div>
-								<div class="cardMenu" class="row row-cols-4 row-cols-md-4 g-4"
+								<div class="cardMenu" id="searchResultBox" class="row row-cols-4 row-cols-md-4 g-4"
 									style="margin-top: 2px;">
-									<div class="row">
-										<div class="col-sm-3">
-											<div class="card">
-												<a href="#"> <img
-													src="https://w.namu.la/s/17dcd3b8702541bd0cbafe33310db996d630b94a47160833a340368f86d250ab8239d519fee1cc4689b41ac3f01a7ad24ddf86302be2ab4b495ddda2d6685f76163c85c4859052b4cb1522397f531467b1ea8b2fa284367527888cbf3da0ff6309a44bd8855489f5f77d1a8a991bdfb1"
-													class="card-img-top"></a>
-												<div class="card-body">
-													<a href="#" style="color: black;">
-															<h5 class="card-title">나노머신, 타코!</h5></a> <a href="#"
-														style="color: black;"><p class="card-text">이마트의전설</p></a>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-3">
-											<div class="card">
-												<a href="#"><img
-													src="https://pbs.twimg.com/media/Di_2tx5UwAAfQaE.jpg"
-													class="card-img-top" alt="..."></a>
-												<div class="card-body">
-													<a href="#" style="color: black;">
-														<h5 class="card-title">Card title</h5></a> <a href="#"
-														style="color: black;"><p class="card-text">Username</p></a>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-3">
-											<div class="card">
-												<a href="#" style="color: black;"><img
-													src="https://nastock.com/files/attach/images/2021/04/01/c9416d6fc1c7e85ce36c7638609f6c5d.jpg"
-													class="card-img-top" alt="..."></a>
-												<div class="card-body">
-													<a href="#" style="color: black;">
-														<h5 class="card-title">Card title</h5></a> <a href="#"
-														style="color: black;"><p class="card-text">Username</p></a>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-3">
-											<div class="card">
-												<a href="#" style="color: black;"><img
-													src="https://blog.kakaocdn.net/dn/xIvda/btqGftBCTA8/w6KnKeCTbq2C1p99bQkCuK/img.jpg"
-													class="card-img-top" alt="..."></a>
-												<div class="card-body">
-													<a href="#" style="color: black;">
-														<h5 class="card-title">Card title</h5></a> <a href="#"
-														style="color: black;"><p class="card-text">Username</p></a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-3">
-											<div class="card">
-												<a href="#" style="color: black;"><img
-													src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRonCe71zACvpzerz7HCJwQkvz2mgo6KVHrew&usqp=CAU"
-													class="card-img-top" alt="..."></a>
-												<div class="card-body">
-													<a href="#" style="color: black;">
-														<h5 class="card-title">Card title</h5></a> <a href="#"
-														style="color: black;"><p class="card-text">Username</p></a>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-3">
-											<div class="card">
-												<a href="#" style="color: black;"><img
-													src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-xs96KruNA61EV7dYCtzym-wxfbSPByiDy8_T7DS2U2g7bAcLG6F5iR3mP5Hasi0xPJk&usqp=CAU"
-													class="card-img-top" alt="..."></a>
-												<div class="card-body">
-													<a href="#" style="color: black;">
-														<h5 class="card-title">Card title</h5></a> <a href="#"
-														style="color: black;"><p class="card-text">Username</p></a>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-3">
-											<div class="card">
-												<a href="#" style="color: black;"><img
-													src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPsAAADJCAMAAADSHrQyAAAAY1BMVEX///+VlZWPj4/j4+O0tLT7+/ucnJyfn5/b29uSkpKkpKSrq6uurq7m5uZmZmaWlpbz8/OIiIjs7Ox5eXlkZGRsbGzNzc2BgYF0dHTU1NRvb2+7u7ve3t7w8PDCwsKKiopcXFxuhZvhAAAELklEQVR4nO3b25KiOhQG4HBIICgHUQgg6rz/U85Kgt3OlNDs6mrdrPm/Kwtzwc9KApIoBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAU3LBu8/tR8k23i2IW77xcxXqRaGq332OPyRSOviCVjwrX5dfRg+CsH33af6Eqerhc/fLouN3n+cPqF10rdvombzVfLNHrsNrlT//ulZ8s+e+6uVM9Ivi2+f9NDcbfaq65pjdT3PzHX4aD2fNL/uUTc91+MR3+HEM2WX301yQzDyyTVcmyEXKLns+DeY2f353m2bBUYieW/aPpzk981TjZzmKzq7u9dfP8KSMbFtu2Xdrogepa8ssexU+Sfr35QhH35hZ9shnV3N89sg35ph94Xep+wkT+i7PMnu50KBknj1ZaJDpz+zM7u/IvtCAeXb9D2dfXfd/ea5D9pec1ysg+0IDZPefMc+/5LxeAdkXGjxmb3m9o/4vz3W5vU7Msq+su1/AYLQGvT77/TU9n70Hq7N/sU67RWuz31fnGUVfmX2sta86q51Gq7Lra+KjRy87r1dYlT3wVQ9YVX1t9oDbNOeszs5rmnP8usxCg/JedWYdXny9LtP7suuS1zTn+LprtX9OhVN0flX/XIed2Tt87/AMqy4e5vF5DKc5776JaiE6u5vbh3r30b21fYjRbgB8bEDQesdxrN9d8iWckwMAAAAAAAAA/A/FqqyEONtliTExJptez1S7sxBXpXr6nCfKbTDJy+lvg73yDa/u7ySbfYsng6GhfOpE0bpuv+tM5Y5XByVF3DQZfW6bQdtj16Zxixd9YeJsuFX0vUo2nF2Ux+NOiISyx4P9y+Pg12Z89uFg6HPSGbdaVQadvRSyPF7oQpxSERfVG8/8+8qbogra7MqWPD/6/VNT9uxIXdvog627NLE2969ESn0gLi5vPffvKsNrEz1m37vDU5+/dqkQp7PLHnXpeaCwl8N9vXbz2W91Ec9mT81VpMVobPb2mPd2bnjMHlWXarsbrsqbMLe57EUdKnE1tcu+M1XenX32KI7jiMbEsevMdl/clzdJPTmbyV7tjcxK6bLfSn/UZu/DQ0HjvWn7vt9y3eU49LPZWyp9LGx2WVDNE2rj+rzsCwZz3U1Wh11STNnrP7NfquLc9S572jSnU9Pk03hPeWQXmQkKW1MauWP3eI8rLtIc6CZus8cDdXCa+UV1CyWX7BU9uJnCPrZdhcjsTC4+s4tk6IQb7+pAiauCap4N1KZ12Wmev2x2vMuQerpsml+USzfD0CQ+SmVKKfa/anp+S4Q8hjQY3J2tM1LUxjakobAvGhoI291QHdn/84+p3SFd9efzOFVRjhEN/lSKKrUjIRIydfeyiA6JCzXsc7oIqbXt51oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+K7fw2lApeR5FTgAAAAASUVORK5CYII="
-													class="card-img-top" alt="..."></a>
-												<div class="card-body">
-													<a href="#" style="color: black;">
-														<h5 class="card-title">Card title</h5></a> <a href="#"
-														style="color: black;"><p class="card-text">Username</p></a>
-												</div>
-											</div>
-										</div>
-									</div>
 								</div>
 							</div>
-							<div class="col-lg-2"></div>
 						</div>
 
 						<ul class="listSize listMainWrap">
 
 						</ul>
 						<br>
-						<div class="row">
-							<div class="col"></div>
-							<div class="col">
-								<div style="display: flex; margin: 0 auto;">
-									<button class="btnFilter"><<</button>
-									<button class="btnFilter btnFilterActive">1</button>
-									<button class="btnFilter">2</button>
-									<button class="btnFilter">3</button>
-									<button class="btnFilter">>></button>
-								</div>
-							</div>
-							<div class="col"></div>
-						</div>
+						
 					</div>
 				</div>
 			</div>
 			<div class="sideBox">
 				<div class="createTalk">
-					<a href="<c:url value='/writePage'/>"><button class="btn-gradient blue">새 글 작성하기</button></a>
+					<a href="<c:url value='/writePage'/>"><button
+							class="btn-gradient blue">새 글 작성하기</button></a>
 				</div>
 				<div class="chatWrap">
-		            <div class="chatHeader">Chat</div>
-		            <div class="chatView">
-		                <div class="anotherMsg">
-		                    <span class="anotherName">Jo</span>
-		                    <span class="msg">Hello, Nice to meet you.</span>
-		                </div>
-		                <div class="myMsg">
-		                    <span class="msg">Nice to meet you, too.</span>
-		                </div>
-		            </div>
-		            <form class="chatForm">
-		                <input type="text" autocomplete="off" class="message" placeholder="메시지를 입력하세요">
-		                <input type="submit" value="보내기">
-		            </form>
-		        </div>
+					<div class="chatHeader">Chat</div>
+					<div id="chatView"></div>
+					<form id="chatForm" onsubmit="return false">
+						<input type="text" autocomplete="off" id="msg"
+							placeholder="메시지를 입력하세요"> <input type="submit" id="send"
+							value="보내기">
+					</form>
+				</div>
 			</div>
 		</div>
 	</section>

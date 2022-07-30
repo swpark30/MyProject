@@ -167,7 +167,7 @@ a{
 }
 
 .questionBox .question .questionLeftBox{
-	width: 10%;
+	width: 100px;
 	text-align: center;
 }
 
@@ -197,30 +197,37 @@ a{
 	margin-left: 7px;
 }
 
-#questionBox .question .questionMainBox{
-	width: 90%;
+.questionBox .question .questionMainBox{
+	width: 800px;
 }
 
 .questionMainBox .questionTitle{
 	margin: 10px 0 0 15px;
 	font-family: 'Jua', sans-serif;
+	height: 30px;
+	overflow: hidden;
+	width:95%;
 }
 
 .questionMainBox .questionText{
 	width:95%;
+	height: 40px;
 	margin: 10px 0 0 20px;
 	font-size: 18px;
 	font-family: 'Nanum Pen Script', cursive;
+	overflow: hidden;
 }
 
 .questionMainBox .questionOthers {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	width: 750px;
+	margin-top: 5px;
 }
 
 .questionMainBox .questionOthers .TagAnaTime {
-	margin: 10px 0 0 20px;
+	margin-left:20px;
 }
 
 .TagAnaTime .questionTagBox {

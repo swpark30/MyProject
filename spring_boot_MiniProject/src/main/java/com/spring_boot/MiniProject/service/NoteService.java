@@ -143,6 +143,88 @@ public class NoteService implements INoteService {
 		// TODO Auto-generated method stub
 		dao.deleteComment(vo);
 	}
+
+	@Override
+	public ArrayList<NoteVO> selectNoteListTitle(int page, int category, String title, String filter) {
+		// TODO Auto-generated method stub
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("page", page);
+		map.put("title", title);
+		map.put("filter", filter);
+		map.put("category", category);
+		return dao.selectNoteListTitle(map);
+	}
+
+	@Override
+	public ArrayList<NoteVO> selectNoteListHashtag(int page, int category, String title, String tag, String filter) {
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("page", page);
+		map.put("title", title);
+		map.put("tag", tag);
+		map.put("filter", filter);
+		map.put("category", category);
+		return dao.selectNoteListHashtag(map);
+	}
+
+	@Override
+	public int selectNoteListTitleCount(String title,int category) {
+		// TODO Auto-generated method stub
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("title", title);
+		map.put("category", category);
+		return dao.selectNoteListTitleCount(map);
+	}
+
+	@Override
+	public int selectNoteListHashtagCount(String title,int category, String tag) {
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("title", title);
+		map.put("tag", tag);
+		map.put("category", category);
+		return dao.selectNoteListHashtagCount(map);
+	}
+
+	@Override
+	public void updateNoteCommentPlus(int noteId) {
+		// TODO Auto-generated method stub
+		dao.updateNoteCommentPlus(noteId);
+	}
+
+	@Override
+	public void updateNoteCommentMinus(int noteId) {
+		// TODO Auto-generated method stub
+		dao.updateNoteCommentMinus(noteId);
+	}
+
+	@Override
+	public int selectNoteId(int commentId) {
+		// TODO Auto-generated method stub
+		return dao.selectNoteId(commentId);
+	}
+
+	@Override
+	public ArrayList<NoteVO> selectNoteUserList(int page, int category, String title, String filter, String userId) {
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("page", page);
+		map.put("title", title);
+		map.put("filter", filter);
+		map.put("userId", userId);
+		map.put("category", category);
+		return dao.selectNoteUserList(map);
+	}
+
+	@Override
+	public int selectNoteUserListCount(String title, int category, String userId) {
+		// TODO Auto-generated method stub
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("title", title);
+		map.put("userId", userId);
+		map.put("category", category);
+		return dao.selectNoteUserListCount(map);
+	}
+
+	
+	
 	
 	
 	

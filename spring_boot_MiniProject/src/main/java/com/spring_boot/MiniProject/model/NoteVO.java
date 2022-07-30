@@ -14,11 +14,13 @@ public class NoteVO {
 	private String note;
 	private String noteView;
 	private String noteLike;
+	
 	private String noteCommentNum;
 	@DateTimeFormat(pattern="yyyy-MM-dd hh:mm:ss")
 	private Date noteCreatedDate;
 	@DateTimeFormat(pattern="yyyy-MM-dd hh:mm:ss")
 	private Date noteUpdatedDate;
+	
 	private String hashName1;
 	private String hashName2;
 	private String hashName3;
@@ -31,23 +33,10 @@ public class NoteVO {
 	private String hashName10;
 	
 	private ArrayList<String> hashname;
+	private String userName;
 	private String userNickname;
 	private String userImg;
 	private String preView;
-	
-	
-	public String getPreView() {
-		return preView;
-	}
-	public void setPreView(String preView) {
-		this.preView = preView;
-	}
-	public String getUserImg() {
-		return userImg;
-	}
-	public void setUserImg(String userImg) {
-		this.userImg = userImg;
-	}
 	public int getNoteId() {
 		return noteId;
 	}
@@ -180,13 +169,28 @@ public class NoteVO {
 	public void setHashname(ArrayList<String> hashname) {
 		this.hashname = hashname;
 	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 	public String getUserNickname() {
 		return userNickname;
 	}
 	public void setUserNickname(String userNickname) {
 		this.userNickname = userNickname;
 	}
-	
-	
-	
+	public String getUserImg() {
+		return userImg;
+	}
+	public void setUserImg(String userImg) {
+		this.userImg = userImg;
+	}
+	public String getPreView() {
+		return preView;
+	}
+	public void setPreView(String preView) {
+		this.preView = preView;
+	}
 }

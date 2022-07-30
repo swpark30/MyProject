@@ -1,12 +1,60 @@
-*{}
- 
- .tableBox {
- 	margin-top: 30px;
- }
- 
+
+
+section {
+	position: relative;
+	top:75px;
+	display: flex;
+	justify-content: center;
+	height: auto;
+	min-height: 100%;
+	padding-bottom:15%;
+	width:100%;
+}
+
+.bodyWrap {
+	width:100%;
+	height: 100%;
+}
+
+.row {
+	margin-top:5%;
+}
+/* 해시 태그 메뉴 검색어 입력 가운데 정렬*/
+.searchBox {
+	margin:auto;
+}
+
+.container-fluid .pageNumBox .pageNum {
+	text-align: center;
+}
+
+
+/* 검색조건 */
+.searchIf {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin-top:2%;
+}
+
+
+.searchIf li {
+	margin-left:1%;
+}
+
+.searchIf li:first-child{
+	font-size:20px;
+	font-weight:bold;
+}
+
+.searchIf li.space {
+	margin-left:0;
+}
+
+
+/* 테이블 */
+
 th, tr, th, td {
-	border:1px solid #aaa;
-	padding:30px 0;
 	font-size:14px;
 	font-weight:bold;
 	white-space: nowrap;
@@ -14,7 +62,6 @@ th, tr, th, td {
 	
 }
 
-/* Table */
 .manage {
     width:80%;
     background-color: #fff;
@@ -50,6 +97,7 @@ th, tr, th, td {
     background-color: rgba(102,152,203,1);
     color: #fff;
 }
+
 .manage tr th:first-child {
     border-radius: 5px 0 0 0;
 }
@@ -57,9 +105,8 @@ th, tr, th, td {
     border-radius: 0 5px 0 0;
 }
 
-
+/* select 버튼 초기화*/
 select {
-  /* Reset Select */
   appearance: none;
   outline: 0;
   border: 0;
@@ -111,30 +158,3 @@ select::-ms-expand {
 
 
 
-section {
-	position: relative;
-	top:75px;
-	display: flex;
-	justify-content: center;
-	height: auto;
-	min-height: 100%;
-	padding-bottom:15%;
-	width:100%;
-}
-
-.bodyWrap {
-	width:100%;
-	height: 100%;
-}
-
-.row {
-	margin-top:5%;
-}
-
-.searchBox {
-	margin:auto;
-}
-
-.container-fluid .pageNumBox .pageNum {
-	text-align: center;
-}

@@ -6,16 +6,14 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>관리자</title>
-		<script src="js/jquery-3.6.0.min.js"></script>
-		<script src="js/talkPage.js"></script>
-		<script src="js/tabMenu.js"></script>
+		<script src="<c:url value='/js/MenuTab.js'/>"></script>
+		<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
 		<script src="https://kit.fontawesome.com/51724f5bf4.js"></script>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-			rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/common.css">
-		<link rel="stylesheet" type="text/css" href="css/buttonE.css">
-		<link rel="stylesheet" type="text/css" href="css/adminSideBar.css">
-		<link rel="stylesheet" type="text/css" href="css/admin.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="<c:url value='/css/common.css'/>">
+		<link rel="stylesheet" type="text/css" href="<c:url value='/css/buttonE.css'/>">
+		<link rel="stylesheet" type="text/css" href="<c:url value='/css/admin.css'/>">
+		<link rel="stylesheet" type="text/css" href="<c:url value='/css/adminSideBar.css'/>">
 		
 	</head>
 	<body>
@@ -23,18 +21,19 @@
 		<section>
 			<nav class="cd-side-nav">
 				<ul>
-					<li class="cd-label">Management</li>
+					<li class="cd-label">관리</li>
 					<li class="has-children user">
-						<a href="<c:url value="/adminUser"/>">User</a></li>
-					
+						<a href="<c:url value="/subPage/adminUser"/>">사용자</a>
+					</li>
 					<li class="has-children post">
-						<a href="<c:url value="/adminPost"/>">Post</a></li>
-					
+						<a href="<c:url value="/subPage/adminPost"/>">게시판</a>
+					</li>
 					<li class="has-children comments">
-						<a href="<c:url value="/adminComment"/>">Comments</a></li>
-					
+						<a href="<c:url value="/subPage/adminComment"/>">댓글</a>
+					</li>
 					<li class="has-children hashtag">
-						<a href="<c:url value="/adminHashTag"/>">Hashtag</a></li>
+						<a href="<c:url value="/subPage/adminHashTag"/>">해시태그</a>
+					</li>
 				</ul>
 	
 				<ul>
@@ -59,11 +58,11 @@
 					<div class="container-fluid" >
 						<div class="row">
 							<br>
-							<div class="container" ">
+							<div class="container">
 								<div class="row">
 									<div class="searchBox col-lg-6 col-12">
 										<form class="d-flex">
-											<input class="form-control" type="search" placeholder="검색어를 입력하세요" aria-label="Search">
+											<input class="form-control" type="search" placeholder="검색어를 입력하세요" aria-label="Search" autofocus>
 											<button class="btnSearch">
 												<i class="fa-solid fa-magnifying-glass"></i>
 											</button>
@@ -73,23 +72,27 @@
 							</div>
 							<div class="tableBox">
 								<form>
-									<table class="manage" style="width: 500px">
+									<table class="manage" style="width: 500px; margin-top: 30px;">
+								
 								        	<tr>
-								            	<th>Tag Name</th>
+								            	<th>태그이름</th>
 								            	<td>Java</td>
 								            	<td>
 								            		<input type="submit" class="btn-gradient blue" value="생성">
-								            		<input type="submit" class="btn-gradient blue" value="삭제">
+								            		<input type="submit" class="btn-gradient red" value="삭제">
 								            	</td>
 								       	 	</tr>
+								       	 	
+								       
 								       	 	<tr>
 								            	<th>Tag Name</th>
 								            	<td><input type="text" style="border: none"></td>
 								            	<td>
 								            		<input type="submit" class="btn-gradient blue" value="생성">
-								            		<input type="submit" class="btn-gradient blue" value="삭제">
+								            		<input type="submit" class="btn-gradient red" value="삭제">
 								            	</td>
 								       	 	</tr>
+								       	
 								    </table>	
 							    </form>	
 							</div> <!--tableBox  -->		

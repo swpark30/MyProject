@@ -21,8 +21,20 @@ public interface INoteDAO {
 	void updateNoteView(int noteId);
 
 	ArrayList<NoteVO> selectQuestionNoteList(int page);
+	
+	ArrayList<NoteVO> selectNoteListTitle(HashMap<String, Object> map);
+	
+	int selectNoteListTitleCount(HashMap<String, Object> map);
+	
+	ArrayList<NoteVO> selectNoteListHashtag(HashMap<String, Object> map);
+	
+	int selectNoteListHashtagCount(HashMap<String, Object> map);
 
 	ArrayList<NoteVO> selectUserWriteQuestionNoteList(String userId);
+	
+	ArrayList<NoteVO> selectNoteUserList(HashMap<String, Object> map);
+	
+	int selectNoteUserListCount(HashMap<String, Object> map);
 
 	ArrayList<NoteVO> selectAllNoteList();
 
@@ -53,5 +65,11 @@ void updateNoteLikePlus(int noteId);
 	void updateComment(CommentVO vo);
 	
 	void deleteComment(CommentVO vo);
+	
+	void updateNoteCommentPlus(int noteId);
+	
+	void updateNoteCommentMinus(int noteId);
+	
+	int selectNoteId(int commentId);
 
 }

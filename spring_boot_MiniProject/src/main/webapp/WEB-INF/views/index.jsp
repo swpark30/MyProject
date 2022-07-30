@@ -10,6 +10,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/topImg.css">
 		<link rel="stylesheet" type="text/css" href="css/common.css">
 		<script src="js/jquery-3.6.0.min.js"></script>
 		<script src="js/index.js"></script>
@@ -33,15 +34,24 @@
 						<c:if test="${empty sessionScope.sid}">
 							<a href="<c:url value='/loginForm'/>">로그인</a>
 							<a>|</a>
-							<a href="<c:url value='/join'/>">회원가입</a>
+							<a href="<c:url value='/joinForm'/>">회원가입</a>
 						</c:if>
 						<c:if test="${not empty sessionScope.sid}">
-							${sessionScope.sid}님
-							<a href="<c:url value='/logout'/>">로그아웃</a> 
-							<a>|</a>
-							<a href="<c:url value='/myPage'/>">마이페이지</a>
-							<a>|</a>
-						<a href="<c:url value='/adminUser'/>">관리자</a>
+							<span>
+								<c:if test="${not empty sessionScope.userImg}">
+									<img class="topImg" src="<c:url value='/images/${sessionScope.userImg}'/>"/>
+								</c:if>
+								${sessionScope.userNickname}님
+							</span>
+							<span>
+								<a href="<c:url value='/logout1'/>">로그아웃</a> 
+								<a>|</a>
+								<a href="<c:url value='/myPage/${sessionScope.sid}'/>">마이페이지</a>
+								<c:if test="${sessionScope.roll eq '1'}">
+									<a>|</a>
+									<a href="<c:url value='/subPage/adminUser/'/>">관리자</a>
+								</c:if>
+							</span>
 						</c:if>
 					</div>
 				</div>

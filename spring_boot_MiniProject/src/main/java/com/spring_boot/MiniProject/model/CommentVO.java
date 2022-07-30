@@ -11,14 +11,18 @@ public class CommentVO {
 	private int noteId;
 	private int pageViewState;
 	private String comment;
+	
 	@DateTimeFormat(pattern="yyyy-MM-dd hh:mm:ss")
 	private Date commentCreatedDate;
 	@DateTimeFormat(pattern="yyyy-MM-dd hh:mm:ss")
 	private Date commentUpdatedDate;
+	
 	private int commentLike;
 	
+	private String userName;
 	private String userNickname;
 	private String userImg;
+	private String noteTitle;
 	public int getCommentId() {
 		return commentId;
 	}
@@ -67,6 +71,12 @@ public class CommentVO {
 	public void setCommentLike(int commentLike) {
 		this.commentLike = commentLike;
 	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 	public String getUserNickname() {
 		return userNickname;
 	}
@@ -79,8 +89,10 @@ public class CommentVO {
 	public void setUserImg(String userImg) {
 		this.userImg = userImg;
 	}
-	
-	
-	
-	
+	public String getNoteTitle() {
+		return noteTitle;
+	}
+	public void setNoteTitle(String noteTitle) {
+		this.noteTitle = noteTitle;
+	}
 }
